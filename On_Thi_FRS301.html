@@ -1,0 +1,2762 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ôn Thi Trắc Nghiệm FRS301 - Pháp Y Số & Điều Tra Số (88 Câu Không Trùng Lặp + Giải Thích Chi Tiết)</title>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #1e293b;
+      --bg-hover: #334155;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-primary: #3b82f6;
+      --accent-hover: #2563eb;
+      --accent-success: #10b981;
+      --accent-danger: #ef4444;
+      --accent-warning: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --border-color: #334155;
+      --curtain-bg: rgba(15, 23, 42, 0.94);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f1f5f9;
+      --bg-secondary: #ffffff;
+      --bg-card: #ffffff;
+      --bg-hover: #e2e8f0;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border-color: #cbd5e1;
+      --curtain-bg: rgba(241, 245, 249, 0.95);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent-primary); }
+
+    /* Header */
+    header {
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.75rem 1.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: var(--shadow-md);
+    }
+
+    .header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.15rem;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-badge {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent-primary);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 9999px;
+    }
+
+    .mode-tabs {
+      display: flex;
+      background: var(--bg-primary);
+      padding: 0.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      gap: 0.25rem;
+    }
+
+    .mode-tab {
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .mode-tab:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.05); }
+    .mode-tab.active {
+      background: var(--accent-primary);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+    }
+
+    .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+
+    .btn-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-icon:hover { color: var(--text-primary); background: var(--bg-hover); border-color: var(--text-muted); }
+    .btn-icon.active { color: var(--accent-primary); border-color: var(--accent-primary); background: rgba(59, 130, 246, 0.1); }
+
+    /* Filter Bar */
+    .filter-bar {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.5rem 1.25rem;
+    }
+
+    .filter-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .filter-chip {
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .filter-chip:hover { border-color: var(--accent-primary); color: var(--text-primary); }
+    .filter-chip.active {
+      background: rgba(59, 130, 246, 0.15);
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      font-weight: 600;
+    }
+
+    .stats-summary {
+      font-size: 0.825rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-weight: 600; }
+    .stat-badge.correct { color: var(--accent-success); }
+    .stat-badge.wrong { color: var(--accent-danger); }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* Fallback Banner */
+    #fallback-banner {
+      display: none;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(239, 68, 68, 0.15));
+      border: 1px solid var(--accent-warning);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    #fallback-banner.show { display: flex; }
+
+    .btn-action {
+      padding: 0.5rem 1rem;
+      background: var(--accent-primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background 0.2s;
+    }
+    .btn-action:hover { background: var(--accent-hover); }
+
+    /* Practice View */
+    .practice-view { display: flex; flex-direction: column; gap: 1rem; }
+
+    .question-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .q-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .q-title-wrap { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+    .q-number-pill {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .q-exam-badge {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      background: var(--bg-hover);
+      color: var(--text-secondary);
+    }
+
+    .q-status-badge {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+    .q-status-badge.correct { background: rgba(16, 185, 129, 0.2); color: var(--accent-success); border: 1px solid var(--accent-success); }
+    .q-status-badge.wrong { background: rgba(239, 68, 68, 0.2); color: var(--accent-danger); border: 1px solid var(--accent-danger); }
+    .q-status-badge.unanswered { background: rgba(100, 116, 139, 0.2); color: var(--text-muted); border: 1px solid var(--border-color); }
+
+    .q-toolbar { display: flex; align-items: center; gap: 0.5rem; }
+
+    /* Image Stage */
+    .image-stage-wrapper {
+      position: relative;
+      width: 100%;
+      background: #000000;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 480px;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .image-container.focus-crop {
+      clip-path: inset(11% 0% 14.5% 0%);
+      transform: scale(1.3);
+      transform-origin: center;
+      margin: 4% 0;
+    }
+
+    .screenshot-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      cursor: zoom-in;
+      transition: opacity 0.2s;
+    }
+
+    /* Spoiler Mask / Curtain on the right ~19.5% */
+    .spoiler-curtain {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 19.5%;
+      height: 100%;
+      background: var(--curtain-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-left: 2px dashed var(--accent-warning);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: -4px 0 15px rgba(0, 0, 0, 0.4);
+    }
+    .spoiler-curtain:hover { background: rgba(15, 23, 42, 0.98); }
+    .spoiler-curtain.revealed { opacity: 0; pointer-events: none; transform: translateX(100%); }
+
+    .curtain-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid var(--accent-warning);
+      color: var(--accent-warning);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.6rem;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+
+    .curtain-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-warning);
+      margin-bottom: 0.3rem;
+      text-transform: uppercase;
+    }
+    .curtain-hint { font-size: 0.725rem; color: var(--text-secondary); line-height: 1.3; }
+
+    /* Action Panel */
+    .action-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+
+    .options-label {
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .option-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      transition: all 0.2s ease;
+      text-align: left;
+    }
+
+    .option-card:hover {
+      border-color: var(--accent-primary);
+      background: var(--bg-hover);
+      transform: translateY(-2px);
+    }
+
+    .option-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--bg-hover);
+      color: var(--text-primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--border-color);
+    }
+
+    .option-text {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    /* Selected state */
+    .option-card.selected-correct {
+      border-color: var(--accent-success);
+      background: rgba(16, 185, 129, 0.15);
+    }
+    .option-card.selected-correct .option-letter {
+      background: var(--accent-success);
+      color: #fff;
+      border-color: var(--accent-success);
+    }
+
+    .option-card.selected-wrong {
+      border-color: var(--accent-danger);
+      background: rgba(239, 68, 68, 0.15);
+    }
+    .option-card.selected-wrong .option-letter {
+      background: var(--accent-danger);
+      color: #fff;
+      border-color: var(--accent-danger);
+    }
+
+    .option-card.is-correct-target {
+      border-color: var(--accent-success);
+      background: rgba(16, 185, 129, 0.1);
+    }
+    .option-card.is-correct-target .option-letter {
+      background: var(--accent-success);
+      color: #fff;
+    }
+
+    /* Explanation Box */
+    .explanation-box {
+      display: none;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+      border: 1.5px solid var(--accent-primary);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 0.5rem;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .explanation-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .explanation-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .explanation-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+    }
+    .explanation-badge.correct { background: rgba(16, 185, 129, 0.2); color: var(--accent-success); }
+    .explanation-badge.wrong { background: rgba(239, 68, 68, 0.2); color: var(--accent-danger); }
+
+    .explanation-content {
+      font-size: 0.925rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: rgba(0, 0, 0, 0.2);
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent-primary);
+    }
+
+    /* Nav Bar */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-nav {
+      padding: 0.65rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover:not(:disabled) { background: var(--bg-hover); border-color: var(--accent-primary); }
+    .btn-nav:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .btn-nav.primary {
+      background: var(--accent-primary);
+      color: #ffffff;
+      border-color: var(--accent-primary);
+    }
+    .btn-nav.primary:hover:not(:disabled) { background: var(--accent-hover); }
+
+    .select-jump {
+      padding: 0.5rem 0.75rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Notes Box */
+    .notes-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.85rem 1.15rem;
+    }
+
+    .notes-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .notes-textarea {
+      width: 100%;
+      min-height: 60px;
+      max-height: 180px;
+      padding: 0.6rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.85rem;
+      resize: vertical;
+      outline: none;
+    }
+    .notes-textarea:focus { border-color: var(--accent-primary); }
+
+    /* Modals & Lightbox */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(6px);
+      z-index: 100; display: none; align-items: center; justify-content: center; padding: 1rem;
+    }
+    .modal-overlay.active { display: flex; }
+
+    .modal-content {
+      background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg);
+      max-width: 640px; width: 100%; max-height: 90vh; display: flex; flex-direction: column;
+      box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .modal-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; font-weight: 700; }
+    .modal-body { padding: 1.25rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+    .modal-footer { padding: 0.75rem 1.25rem; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end; gap: 0.5rem; background: var(--bg-secondary); }
+
+    .matrix-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 0.45rem; }
+    @media (max-width: 600px) { .matrix-grid { grid-template-columns: repeat(5, 1fr); } }
+
+    .matrix-item {
+      aspect-ratio: 1; border-radius: var(--radius-sm); border: 1px solid var(--border-color);
+      background: var(--bg-secondary); font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;
+      transition: all 0.15s; position: relative;
+    }
+    .matrix-item:hover { border-color: var(--accent-primary); transform: scale(1.08); z-index: 2; }
+    .matrix-item.correct { background: rgba(16, 185, 129, 0.2); border-color: var(--accent-success); color: var(--accent-success); }
+    .matrix-item.wrong { background: rgba(239, 68, 68, 0.2); border-color: var(--accent-danger); color: var(--accent-danger); }
+    .matrix-item.current { box-shadow: 0 0 0 2px var(--accent-primary); }
+    .matrix-item.starred::after { content: "★"; position: absolute; top: 1px; right: 2px; font-size: 0.65rem; color: var(--accent-warning); }
+
+    .lightbox-modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.92); z-index: 200; display: none; align-items: center; justify-content: center; padding: 1rem; }
+    .lightbox-modal.active { display: flex; }
+    .lightbox-img { max-width: 95vw; max-height: 95vh; object-fit: contain; cursor: zoom-out; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon">FR</div>
+        <div>
+          <div class="brand-title">
+            FRS301 ÔN THI
+            <span class="brand-badge" id="total-q-badge">88 câu (Đã lọc trùng 100%)</span>
+          </div>
+          <div style="font-size: 0.725rem; color: var(--text-secondary);">Pháp Y Số & Điều Tra Kỹ Thuật Số (Digital Forensics) • FPT University</div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn-icon" title="Ma trận câu hỏi" onclick="openMatrixModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+        </button>
+        <button class="btn-icon" id="btn-theme" title="Đổi giao diện sáng/tối" onclick="toggleTheme()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="theme-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="btn-icon" title="Phím tắt (?)" onclick="openShortcutsModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <div class="filter-group">
+        <button class="filter-chip active" data-filter="all" onclick="setFilter('all')">📚 Tất cả (88)</button>
+        <button class="filter-chip" data-filter="fa25" onclick="setFilter('fa25')">📘 Đề FA25 - FE (50)</button>
+        <button class="filter-chip" data-filter="su25" onclick="setFilter('su25')">📙 Đề SU25 - Final (38)</button>
+        <button class="filter-chip" data-filter="starred" onclick="setFilter('starred')">⭐ Đã gắn sao (<span id="count-starred">0</span>)</button>
+        <button class="filter-chip" data-filter="wrong" onclick="setFilter('wrong')">❌ Cần ôn lại (<span id="count-wrong">0</span>)</button>
+        <button class="filter-chip" data-filter="correct" onclick="setFilter('correct')">✅ Đã đúng (<span id="count-correct">0</span>)</button>
+      </div>
+
+      <div class="stats-summary">
+        <span class="stat-badge correct">✅ <span id="stat-correct-num">0</span> Đúng</span>
+        <span class="stat-badge wrong">❌ <span id="stat-wrong-num">0</span> Sai</span>
+        <span class="stat-badge" style="color: var(--accent-primary);">📊 <span id="stat-rate">0%</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Area -->
+  <main>
+    <div class="practice-view" id="view-practice">
+              <!-- Fallback Image Banner -->
+        <div id="img-fallback-banner" style="display: none; background: rgba(245, 158, 11, 0.15); border: 1px solid var(--accent-warning); border-radius: var(--radius-md); padding: 0.85rem 1.25rem; margin-bottom: 1rem; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 1.5rem;">⚠️</span>
+            <div style="font-size: 0.875rem;">
+              <strong>Không hiển thị được ảnh câu hỏi?</strong><br>
+              <span style="color: var(--text-secondary);">Nếu bạn di chuyển file HTML sang thư mục khác, hãy chọn thư mục chứa các file ảnh (Screenshots) để nạp lại ngay:</span>
+            </div>
+          </div>
+          <div>
+            <label style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--accent-primary); color: #fff; font-weight: 600; font-size: 0.85rem; border-radius: var(--radius-sm); cursor: pointer;">
+              📂 Chọn thư mục ảnh
+              <input type="file" webkitdirectory directory multiple style="display: none;" onchange="loadLocalImagesFolder(event)">
+            </label>
+          </div>
+        </div>
+      <div class="question-card">
+        <!-- Question Meta -->
+        <div class="q-meta-bar">
+          <div class="q-title-wrap">
+            <div class="q-number-pill">
+              <span id="current-q-index">Câu 1</span>
+              <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-muted);" id="current-q-total">/ 88</span>
+            </div>
+            <div class="q-exam-badge" id="current-q-exam">Đề FA25 - FE</div>
+            <div class="q-status-badge unanswered" id="current-q-status">Chưa làm</div>
+          </div>
+
+          <div class="q-toolbar">
+            <button class="btn-icon" id="btn-star" title="Gắn dấu sao (Phím S)" onclick="toggleStarCurrent()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="star-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <button class="btn-icon" id="btn-focus-mode" title="Phóng to chữ câu hỏi (Phím F)" onclick="toggleFocusCrop()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            </button>
+            <button class="btn-icon" title="Xem ảnh gốc toàn màn hình (Phím Z)" onclick="openLightboxCurrent()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+            <button class="btn-icon" id="btn-toggle-curtain" title="Ẩn/Hiện đáp án gợi ý FuOverflow (Phím Space)" onclick="toggleCurtain()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="curtain-eye-icon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question Prompt Header -->
+        <div style="font-size: 1.05rem; font-weight: 700; line-height: 1.5; color: var(--text-primary); padding: 0.25rem 0;" id="q-prompt-text">
+          Loading question text...
+        </div>
+
+        <!-- Image Stage -->
+        <div class="image-stage-wrapper" id="image-stage">
+          <div class="image-container" id="image-container">
+            <img id="main-screenshot" class="screenshot-img" src="" alt="Ảnh câu hỏi" onclick="openLightboxCurrent()" onload="handleImageLoaded(this)" onerror="handleImageError(this)">
+          </div>
+
+          <!-- Spoiler Curtain -->
+          <div class="spoiler-curtain" id="spoiler-curtain" onclick="revealCurtain()">
+            <div class="curtain-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="curtain-title">Thảo luận FuOverflow</div>
+            <div class="curtain-hint">Bấm vào đây hoặc nhấn Space để xem</div>
+          </div>
+        </div>
+
+        <!-- Interactive Options Grid -->
+        <div class="action-panel">
+          <div class="options-label">
+            <span>CHỌN ĐÁP ÁN CỦA BẠN (HOẶC NHẤN PHÍM 1-5 / A-E):</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">* Hệ thống sẽ tự chấm và hiện giải thích chi tiết ngay lập tức</span>
+          </div>
+          <div class="options-grid" id="options-container">
+            <!-- Dynamic options -->
+          </div>
+
+          <!-- Explanation Box (Appears after answer selection) -->
+          <div class="explanation-box" id="explanation-box">
+            <div class="explanation-header">
+              <div class="explanation-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <span>GIẢI THÍCH CHI TIẾT ĐÁP ÁN: <strong id="exp-correct-letter" style="color: var(--accent-success);">[C]</strong></span>
+              </div>
+              <div class="explanation-badge correct" id="exp-badge">Chính xác 🎉</div>
+            </div>
+            <div class="explanation-content" id="explanation-text">
+              Nội dung giải thích chi tiết...
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-nav" id="btn-prev" onclick="prevQuestion()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              Câu trước (←)
+            </button>
+            <button class="btn-nav primary" id="btn-next" onclick="nextQuestion()">
+              Câu sau (→)
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <button class="btn-nav" onclick="randomQuestion()" title="Ngẫu nhiên (Phím R)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+              Ngẫu nhiên
+            </button>
+            <select class="select-jump" id="select-jump" onchange="jumpToSelected(this.value)"></select>
+          </div>
+        </div>
+
+        <!-- Personal Notes -->
+        <div class="notes-card">
+          <div class="notes-header">
+            <span>📝 Ghi chú cá nhân cho câu hỏi này</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Tự động lưu vào trình duyệt</span>
+          </div>
+          <textarea class="notes-textarea" id="question-note" placeholder="Nhập ghi chú công thức, mẹo nhớ cho câu này..." oninput="saveCurrentNote(this.value)"></textarea>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL: Matrix -->
+  <div class="modal-overlay" id="modal-matrix" onclick="closeModalOnBackdrop(event, 'modal-matrix')">
+    <div class="modal-content" style="max-width: 720px;">
+      <div class="modal-header">
+        <div>Ma Trận 88 Câu Hỏi FRS301 (Đã Lọc Trùng) (Đã Lọc Trùng)</div>
+        <button class="btn-icon" onclick="closeModal('modal-matrix')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="matrix-grid" id="matrix-container"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-nav" onclick="closeModal('modal-matrix')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Shortcuts -->
+  <div class="modal-overlay" id="modal-shortcuts" onclick="closeModalOnBackdrop(event, 'modal-shortcuts')">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>⌨️ Phím Tắt</div>
+        <button class="btn-icon" onclick="closeModal('modal-shortcuts')">&times;</button>
+      </div>
+      <div class="modal-body" style="font-size: 0.9rem; line-height: 2;">
+        <div><kbd>←</kbd> / <kbd>→</kbd> : Chuyển câu trước / câu sau</div>
+        <div><kbd>1</kbd> - <kbd>5</kbd> hoặc <kbd>A</kbd> - <kbd>E</kbd> : Chọn đáp án</div>
+        <div><kbd>Space</kbd> : Ẩn / hiện rèm che bình luận gợi ý FuOverflow</div>
+        <div><kbd>S</kbd> : Đánh dấu sao ⭐</div>
+        <div><kbd>F</kbd> : Phóng to / Cắt viền chữ câu hỏi</div>
+        <div><kbd>Z</kbd> : Xem ảnh toàn màn hình</div>
+        <div><kbd>R</kbd> : Câu ngẫu nhiên</div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-nav" onclick="closeModal('modal-shortcuts')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-modal" id="lightbox-modal" onclick="closeLightbox()">
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Zoom Screenshot">
+  </div>
+
+  <script>
+    const questions = [
+  {
+    "id": 1,
+    "origIndex": 1,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 1,
+    "file": "Screenshot 2026-11-15 092842.png",
+    "question": "In digital forensics, what challenges might investigators face when dealing with volatile data according to the order of volatility?",
+    "options": {
+      "A": "Volatile data is less susceptible to alteration or loss",
+      "B": "Volatile data must be preserved and encrypted before non-volatile data",
+      "C": "Volatile data may be lost if not captured in a timely manner",
+      "D": "Volatile data is more easily recoverable compared to non-volatile data"
+    },
+    "answer": "C",
+    "explanation": "Dữ liệu khả biến (Volatile data - như RAM, thanh ghi CPU, cache, bảng định tuyến, kết nối mạng đang mở) sẽ biến mất hoàn toàn ngay khi thiết bị bị tắt nguồn hoặc mất điện. Theo nguyên tắc 'Thứ tự ưu tiên thu thập dữ liệu khả biến' (Order of Volatility theo RFC 3227), điều tra viên phải đối mặt với áp lực thời gian lớn nhất: nếu không trích xuất kịp thời (live acquisition) trong lúc máy còn hoạt động thì dữ liệu sẽ bị mất vĩnh viễn và không thể khôi phục lại."
+  },
+  {
+    "id": 2,
+    "origIndex": 2,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 2,
+    "file": "Screenshot 2026-11-15 094005.png",
+    "question": "What challenges might arise when securing a digital forensics crime scene compared to a traditional crime scene?",
+    "options": {
+      "A": "Digital evidence is prone to tampering or alteration by users",
+      "B": "Electronic devices may contain volatile data that could be lost if powered off",
+      "C": "Digital evidence is easier to preserve due to its intangible nature",
+      "D": "Electronic devices are not specialized and can be easily operated"
+    },
+    "answer": "B",
+    "explanation": "So với hiện trường vụ án truyền thống (vết máu, dấu vân tay có thể niêm phong vật lý), hiện trường kỹ thuật số có đặc thù là các thiết bị điện tử có thể đang chứa dữ liệu khả biến trong bộ nhớ RAM (như khóa mã hóa BitLocker, mật khẩu, phiên đăng nhập, tiến trình độc hại). Nếu điều tra viên tắt nguồn ngay lập tức (pull the plug) hoặc thao tác sai cách, toàn bộ dữ liệu quan trọng này sẽ bị xóa sạch."
+  },
+  {
+    "id": 3,
+    "origIndex": 3,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 3,
+    "file": "Screenshot 2026-11-15 094013.png",
+    "question": "What is the primary objective of securing the scene in digital forensics?",
+    "options": {
+      "A": "To prevent unauthorized access to the investigation site",
+      "B": "To expedite the investigation process by allowing multiple personnel access",
+      "C": "To ensure the safety of forensic analysts during evidence collection",
+      "D": "To minimize disruption and preserve the integrity of potential evidence"
+    },
+    "answer": "D",
+    "explanation": "Mục tiêu tối thượng của việc bảo vệ và phong tỏa hiện trường kỹ thuật số là giảm thiểu tối đa sự xáo trộn, ngăn ngừa việc chứng cứ bị thay đổi, nhiễm bẩn (contamination) hoặc phá hủy, từ đó bảo toàn tính toàn vẹn (integrity) tuyệt đối của mọi chứng cứ số để có giá trị pháp lý trước tòa án."
+  },
+  {
+    "id": 4,
+    "origIndex": 4,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 4,
+    "file": "Screenshot 2026-11-15 094157.png",
+    "question": "What is a significant challenge when analyzing cell phone data in digital forensics compared to computer data?",
+    "options": {
+      "A": "Cell phones lack connectivity options for data transfer",
+      "B": "Cell phone data is often fragmented and difficult to piece together across diverse proprietary OS/hardware",
+      "C": "Cell phones are not commonly used to store sensitive information",
+      "D": "Cell phone data is easier to acquire and analyze due to simpler file structures"
+    },
+    "answer": "B",
+    "explanation": "Điện thoại di động phân mảnh rất cao với hàng trăm mẫu chip (Qualcomm, MediaTek, Apple Silicon), hệ điều hành khác nhau (iOS, Android với các phiên bản tùy biến của Samsung, Xiaomi...), cơ chế bảo mật sandbox và mã hóa phần cứng khắt khe. Dữ liệu trên điện thoại thường phân mảnh trong các cơ sở dữ liệu SQLite, bộ nhớ flash NAND, và thay đổi liên tục bởi các tiến trình ngầm, khiến việc giải mã và tái tạo dữ liệu khó khăn hơn nhiều so với máy tính thông thường."
+  },
+  {
+    "id": 5,
+    "origIndex": 5,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 5,
+    "file": "Screenshot 2026-11-15 094411.png",
+    "question": "Which category of GPS units allows real-time information retrieval, including Google searches and traffic updates?",
+    "options": {
+      "A": "Simple units",
+      "B": "Smart units",
+      "C": "Hybrid units",
+      "D": "Connected units"
+    },
+    "answer": "D",
+    "explanation": "Thiết bị GPS kết nối (Connected units) được tích hợp modem di động (cellular data) hoặc kết nối Internet để truyền và nhận dữ liệu thời gian thực hai chiều, cho phép tra cứu thông tin trực tiếp, tìm kiếm bản đồ Google, cập nhật tình trạng kẹt xe theo thời gian thực và thời tiết."
+  },
+  {
+    "id": 6,
+    "origIndex": 6,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 6,
+    "file": "Screenshot 2026-11-15 094509.png",
+    "question": "Which tool supports over twenty-five hundred phones, designed to extract information on scene, and has a SIM card reader and cloner?",
+    "options": {
+      "A": "EnCase Smartphone Examiner",
+      "B": "Cellebrite UFED",
+      "C": "Oxygen Forensic Suite",
+      "D": "Paraben Device Seizure"
+    },
+    "answer": "B",
+    "explanation": "Cellebrite UFED (Universal Forensic Extraction Device) là thiết bị phần cứng/phần mềm chuyên dụng nổi tiếng nhất trong ngành pháp y di động, được thiết kế dưới dạng vali cơ động để tác chiến tại hiện trường (on scene), tích hợp đầu đọc và sao chép thẻ SIM (SIM card reader and cloner), hỗ trợ hàng ngàn dòng điện thoại khác nhau."
+  },
+  {
+    "id": 7,
+    "origIndex": 7,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 7,
+    "file": "Screenshot 2026-11-15 094715.png",
+    "question": "What type of GPS data provides a record of where the unit has been and is created automatically by the system?",
+    "options": {
+      "A": "Waypoints",
+      "B": "Points of Interest (POI)",
+      "C": "Routes",
+      "D": "Track Logs"
+    },
+    "answer": "D",
+    "explanation": "Track Logs (hoặc Trackpoints) là nhật ký hành trình được hệ thống GPS tự động ghi lại theo chu kỳ thời gian hoặc khoảng cách di chuyển (tọa độ, cao độ, thời gian, vận tốc). Ngược lại, Waypoints hay POI là các điểm do người dùng hoặc nhà sản xuất chủ động lưu lại."
+  },
+  {
+    "id": 8,
+    "origIndex": 8,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 8,
+    "file": "Screenshot 2026-11-15 094815.png",
+    "question": "What is the purpose of link files (.lnk) on Windows operating system?",
+    "options": {
+      "A": "Managing system fonts",
+      "B": "Creating shortcuts to files and folders",
+      "C": "Storing temporary internet files",
+      "D": "Optimizing system performance"
+    },
+    "answer": "B",
+    "explanation": "File shortcut (.lnk) trong Windows có mục đích chính là tạo đường tắt dẫn nhanh đến file hoặc thư mục. Trong điều tra số (Forensics), file .lnk là bằng chứng vàng (artifact) cực kỳ quý giá vì nó lưu lại đường dẫn gốc, Volume Serial Number, thời gian truy cập MACB, kích thước file và thậm chí cả địa chỉ MAC card mạng của máy chủ lưu trữ."
+  },
+  {
+    "id": 9,
+    "origIndex": 9,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 9,
+    "file": "Screenshot 2026-11-15 094916.png",
+    "question": "What is the function of MRU in the Windows operating system?",
+    "options": {
+      "A": "Managing system resources",
+      "B": "Monitoring real-time updates",
+      "C": "Maintaining registry entries",
+      "D": "Tracking and displaying recently used files and applications"
+    },
+    "answer": "D",
+    "explanation": "MRU là viết tắt của 'Most Recently Used'. Trong Windows Registry, các khóa MRU (như RunMRU, OpenSavePidlMRU, RecentDocs) có chức năng theo dõi và lưu lại danh sách các tài liệu, tập tin, lệnh Run hoặc ứng dụng mà người dùng vừa mở gần đây nhất."
+  },
+  {
+    "id": 10,
+    "origIndex": 10,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 10,
+    "file": "Screenshot 2026-11-15 095016.png",
+    "question": "What is the feature of restore points on Windows system?",
+    "options": {
+      "A": "Automatic file backup",
+      "B": "System performance optimization",
+      "C": "Recovery of system settings and files to a previous state",
+      "D": "Encryption of sensitive data"
+    },
+    "answer": "C",
+    "explanation": "Điểm khôi phục hệ thống (System Restore Points - dựa trên công nghệ Volume Shadow Copy) cho phép đưa cấu hình hệ thống, registry, driver và các file hệ thống quay trở lại trạng thái hoạt động tốt tại một thời điểm trong quá khứ khi xảy ra lỗi hoặc sự cố."
+  },
+  {
+    "id": 11,
+    "origIndex": 11,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 11,
+    "file": "Screenshot 2026-11-15 100557.png",
+    "question": "When is the file modified time based on the file properties dialog shown?",
+    "options": {
+      "A": "Wednesday, April 20, 2011, 7:15:52 PM",
+      "B": "Wednesday, April 20, 2011, 7:15:51 AM",
+      "C": "Wednesday, April 20, 2011, 7:15:52 AM",
+      "D": "Wednesday, April 20, 2011, 7:15:51 PM"
+    },
+    "answer": "A",
+    "explanation": "Dựa vào hộp thoại thuộc tính tập tin Word (.docx) trong hình ảnh: dòng 'Modified:' hiển thị chính xác là 'Wednesday, April 20, 2011, 7:15:52 PM' (trong khi 'Created:' là 7:15:51 PM). Do đó đáp án A là chính xác."
+  },
+  {
+    "id": 12,
+    "origIndex": 12,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 12,
+    "file": "Screenshot 2026-11-15 100602.png",
+    "question": "Which method is used to identify a file more reliably than its extension?",
+    "options": {
+      "A": "File icon",
+      "B": "File name",
+      "C": "File header (Magic Numbers / Signatures)",
+      "D": "File size"
+    },
+    "answer": "C",
+    "explanation": "Phần mở rộng file (.jpg, .exe, .doc) rất dễ bị người dùng hoặc phần mềm độc hại đổi tên để qua mắt người dùng. Phương pháp nhận dạng chính xác và đáng tin cậy nhất trong điều tra số là phân tích File Header (Magic Numbers / Chữ ký tệp) - các byte đầu tiên của file (ví dụ: 'FF D8 FF' cho JPEG, '4D 5A' cho PE/EXE, '25 50 44 46' cho PDF)."
+  },
+  {
+    "id": 13,
+    "origIndex": 13,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 13,
+    "file": "Screenshot 2026-11-15 100648.png",
+    "question": "When analyzing digital evidence, what significance does the hexadecimal notation hold in understanding data representation?",
+    "options": {
+      "A": "It indicates the number of bytes in a file",
+      "B": "It represents the size of the storage device in gigabytes",
+      "C": "It allows more efficient compression of data",
+      "D": "It provides a concise and human-readable format for binary data"
+    },
+    "answer": "D",
+    "explanation": "Dữ liệu máy tính ở mức thấp nhất là các chuỗi nhị phân 0 và 1 (bit). Hệ thập lục phân (Hexadecimal - hệ cơ số 16) gom nhóm 4 bit thành 1 ký tự hex (và 8 bit thành 2 ký tự hex cho 1 byte), giúp con người và các chuyên gia điều tra dễ dàng đọc, phân tích và biểu diễn dữ liệu nhị phân thô một cách ngắn gọn, trực quan trên các trình soạn thảo hex (Hex Editor)."
+  },
+  {
+    "id": 14,
+    "origIndex": 14,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 14,
+    "file": "Screenshot 2026-11-15 100839.png",
+    "question": "What happens if a file extension is changed but the file header remains the same?",
+    "options": {
+      "A": "The file becomes permanently corrupted",
+      "B": "The operating system adjusts the header to match the new extension",
+      "C": "The file won't open properly in the expected default program",
+      "D": "The data inside the file is erased immediately"
+    },
+    "answer": "C",
+    "explanation": "Hệ điều hành Windows dựa vào phần mở rộng (extension) để liên kết với chương trình mở mặc định. Nếu bạn đổi đuôi file .exe thành .txt, Notepad sẽ cố mở file này và chỉ hiển thị các ký tự rác hoặc báo lỗi, tập tin không thể khởi chạy như một chương trình thực thi bình thường dù dữ liệu bên trong và header của nó vẫn còn nguyên vẹn."
+  },
+  {
+    "id": 15,
+    "origIndex": 15,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 15,
+    "file": "Screenshot 2026-11-15 101009.png",
+    "question": "In digital forensics, what is the relationship between a byte and a bit?",
+    "options": {
+      "A": "A byte is composed of 8 bits",
+      "B": "A bit is composed of 8 bytes",
+      "C": "A byte is equivalent to 16 bits",
+      "D": "A bit is equivalent to 4 bytes"
+    },
+    "answer": "A",
+    "explanation": "Đây là nguyên lý cơ bản của khoa học máy tính: 1 Byte = 8 Bits. Bit là đơn vị đo lường thông tin nhỏ nhất (chỉ có giá trị 0 hoặc 1), còn Byte là đơn vị lưu trữ cơ bản của hầu hết các kiến trúc máy tính hiện đại."
+  },
+  {
+    "id": 16,
+    "origIndex": 16,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 16,
+    "file": "Screenshot 2026-11-15 101059.png",
+    "question": "What role does the Message ID play in tracing an e-mail message?",
+    "options": {
+      "A": "It encrypts the email content for secure delivery",
+      "B": "It uniquely identifies an email message across mail transfer agents and servers",
+      "C": "It authenticates the sender's identity using digital certificates",
+      "D": "It specifies the priority level of the email message"
+    },
+    "answer": "B",
+    "explanation": "Message-ID là một định danh duy nhất (Unique Identifier) do máy chủ gửi thư (hoặc client tạo email) gán cho mỗi thông điệp email theo chuẩn RFC 2822/5322. Điều tra viên sử dụng Message-ID để đối chiếu và truy vết email qua các nhật ký log của các máy chủ thư điện tử (MTA) trên đường đi."
+  },
+  {
+    "id": 17,
+    "origIndex": 17,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 17,
+    "file": "Screenshot 2026-11-15 101157.png",
+    "question": "Which email header field shows the IP address and mail server of the sender and intermediary hops?",
+    "options": {
+      "A": "To field",
+      "B": "Received header",
+      "C": "Subject field",
+      "D": "From field"
+    },
+    "answer": "B",
+    "explanation": "Trường 'Received:' trong header của email được thêm vào bởi mỗi máy chủ mail trung gian khi chuyển tiếp thư. Nó chứa thông tin quý giá nhất cho việc điều tra vết tích: địa chỉ IP thực của máy trạm gửi, tên máy chủ chuyển tiếp, thời gian (timestamp) và giao thức truyền tải."
+  },
+  {
+    "id": 18,
+    "origIndex": 18,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 18,
+    "file": "Screenshot 2026-11-15 101400.png",
+    "question": "What is 'remailing' in the context of e-mail spoofing and anonymity?",
+    "options": {
+      "A": "A service that forwards emails without changing any information",
+      "B": "A method of encrypting emails to protect content confidentiality",
+      "C": "A service that forwards e-mails, hiding/stripping identifying information to ensure user anonymity",
+      "D": "A way to send bulk e-mails to multiple recipients at once"
+    },
+    "answer": "C",
+    "explanation": "Dịch vụ Remailer (Anonymous Remailer) là máy chủ trung gian nhận email từ người gửi, xóa bỏ toàn bộ các trường header định danh gốc (như địa chỉ IP của người gửi, tên máy tính, thông tin client) rồi mới chuyển tiếp email đó đến người nhận cuối cùng, nhằm bảo vệ danh tính của người gửi."
+  },
+  {
+    "id": 19,
+    "origIndex": 19,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 19,
+    "file": "Screenshot 2026-11-15 101752.png",
+    "question": "Which of the following statements about Snort is true?",
+    "options": {
+      "A": "Snort is a closed-source proprietary network management tool",
+      "B": "Snort is an open-source network intrusion detection system (NIDS) that monitors network traffic in real time and issues alerts for potential threats",
+      "C": "Snort is primarily used for encrypting network communications",
+      "D": "Snort replaces the need for firewalls in protecting network resources"
+    },
+    "answer": "B",
+    "explanation": "Snort là một hệ thống phát hiện/ngăn ngừa xâm nhập mạng (NIDS/NIPS) mã nguồn mở rất phổ biến. Nó phân tích lưu lượng gói tin mạng theo thời gian thực dựa trên các bộ quy tắc (rule-based) để phát hiện các dấu hiệu tấn công, quét cổng, buffer overflow và phát cảnh báo."
+  },
+  {
+    "id": 20,
+    "origIndex": 20,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 20,
+    "file": "Screenshot 2026-11-15 101954.png",
+    "question": "What is a critical aspect of the post-incident activity in the incident response life cycle according to NIST?",
+    "options": {
+      "A": "Identifying potential vulnerabilities in the network defenses",
+      "B": "Assessing and testing network security measures regularly",
+      "C": "Conducting a thorough post-incident review (lessons learned) to identify areas for improvement",
+      "D": "Implementing measures to prevent intrusions before they happen"
+    },
+    "answer": "C",
+    "explanation": "Theo chuẩn NIST SP 800-61 (Computer Security Incident Handling Guide), giai đoạn 'Post-Incident Activity' (hoạt động sau sự cố) tập trung chủ yếu vào việc tổ chức cuộc họp 'Lessons Learned' (Rút ra bài học kinh nghiệm), đánh giá lại quy trình xử lý, ghi nhận những điểm làm tốt và những điểm cần cải tiến cho tổ chức."
+  },
+  {
+    "id": 21,
+    "origIndex": 21,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 21,
+    "file": "Screenshot 2026-11-15 102112.png",
+    "question": "What is the primary purpose of examining intermediary devices such as routers and switches in a network investigation?",
+    "options": {
+      "A": "To identify the physical location of the hacker directly",
+      "B": "To determine the exact type of malware used in the attack",
+      "C": "To gather valuable information and evidence about the route followed by the attacker",
+      "D": "To identify vulnerabilities in the network's security configuration"
+    },
+    "answer": "C",
+    "explanation": "Các thiết bị mạng trung gian như Router, Switch và Firewall ghi nhận nhật ký định tuyến (routing tables), bảng ARP, danh sách liên kết MAC-IP và log kết nối. Việc kiểm tra các thiết bị này giúp điều tra viên lần theo đường truyền (route/hops) mà kẻ tấn công đã sử dụng để thâm nhập hệ thống."
+  },
+  {
+    "id": 22,
+    "origIndex": 22,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 22,
+    "file": "Screenshot 2026-11-15 190324.png",
+    "question": "What is the main purpose of creating a forensic clone?",
+    "options": {
+      "A": "To improve device performance and speed",
+      "B": "To allow testing by students without supervision",
+      "C": "To preserve the original evidence while conducting analysis on the working copy",
+      "D": "To share evidence directly on public cloud storage"
+    },
+    "answer": "C",
+    "explanation": "Quy tắc vàng trong điều tra số (Digital Forensics) là: 'Không bao giờ thao tác trực tiếp trên ổ đĩa gốc chứa vật chứng'. Điều tra viên phải tạo một bản sao nhân bản pháp y (Forensic Image/Clone bit-by-bit), xác thực bằng mã băm (Hash), sau đó niêm phong chứng cứ gốc và chỉ tiến hành phân tích trên bản sao."
+  },
+  {
+    "id": 23,
+    "origIndex": 23,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 23,
+    "file": "Screenshot 2026-11-15 190327.png",
+    "question": "Which of the following is a key advantage of analyzing a live system?",
+    "options": {
+      "A": "The ability to access and analyze volatile data such as RAM contents",
+      "B": "Reduced risk of data corruption during analysis",
+      "C": "Simplified evidence preservation process",
+      "D": "Easier detection of hidden files"
+    },
+    "answer": "A",
+    "explanation": "Ưu điểm lớn nhất của việc phân tích hệ thống đang hoạt động (Live Analysis) là điều tra viên có thể thu thập được dữ liệu khả biến (RAM, cache, các kết nối mạng đang mở, tiến trình đang chạy, các phân vùng ổ đĩa đang được giải mã). Đây là những bằng chứng quý giá sẽ biến mất hoàn toàn nếu tắt máy (Dead Analysis)."
+  },
+  {
+    "id": 24,
+    "origIndex": 24,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 24,
+    "file": "Screenshot 2026-11-15 190358.png",
+    "question": "What is a potential risk of analyzing a live system in digital forensics?",
+    "options": {
+      "A": "Inability to capture network traffic",
+      "B": "Potential alteration or destruction of evidence due to ongoing system processes",
+      "C": "Lack of access to file system data",
+      "D": "Inability to analyze system logs"
+    },
+    "answer": "B",
+    "explanation": "Nhược điểm và rủi ro lớn nhất của Live Analysis là nguyên lý Heisenberg trong máy tính: việc cắm USB công cụ vào hay chạy lệnh trên hệ thống đang sống chắc chắn sẽ làm thay đổi một phần dữ liệu RAM, cập nhật timestamp, tạo tiến trình mới hoặc có thể kích hoạt mã độc tự hủy (logic bomb)."
+  },
+  {
+    "id": 25,
+    "origIndex": 25,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 25,
+    "file": "Screenshot 2026-11-15 190406.png",
+    "question": "What is a tool that takes advantage of password vulnerabilities and rainbow tables to crack/reset passwords?",
+    "options": {
+      "A": "Keylogger",
+      "B": "Rainbow table",
+      "C": "Password cracker",
+      "D": "Ophcrack"
+    },
+    "answer": "D",
+    "explanation": "Ophcrack là một công cụ bẻ khóa mật khẩu Windows nguồn mở rất nổi tiếng sử dụng kỹ thuật Bảng cầu vồng (Rainbow Tables) để giải mã nhanh chóng các hàm băm mật khẩu LM/NTLM được trích xuất từ file SAM."
+  },
+  {
+    "id": 26,
+    "origIndex": 26,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 26,
+    "file": "Screenshot 2026-11-15 190409.png",
+    "question": "What is a dictionary attack?",
+    "options": {
+      "A": "A method for encrypting data using a predefined set of words",
+      "B": "A technique for guessing passwords by cycling through a list of common words or phrases",
+      "C": "A strategy for breaking into systems by exploiting software vulnerabilities",
+      "D": "A tool for organizing and managing passwords securely"
+    },
+    "answer": "B",
+    "explanation": "Tấn công từ điển (Dictionary Attack) là kỹ thuật bẻ khóa mật khẩu hoặc mã hóa bằng cách thử tự động hàng loạt từ ngữ, cụm từ thông dụng có trong một danh sách từ điển định sẵn (wordlist, ví dụ như rockyou.txt) thay vì thử vét cạn mọi ký tự (Brute-force)."
+  },
+  {
+    "id": 27,
+    "origIndex": 27,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 27,
+    "file": "Screenshot 2026-11-15 190412.png",
+    "question": "Which of the following applications are steganography applications?",
+    "options": {
+      "A": "Photoshop",
+      "B": "WinRAR",
+      "C": "OpenStego",
+      "D": "VLC media player"
+    },
+    "answer": "C",
+    "explanation": "OpenStego là phần mềm chuyên dụng để giấu tin mật (Steganography). Nó cho phép giấu tập tin dữ liệu (payload) vào bên trong các tập tin hình ảnh (cover image) bằng thuật toán LSB (Least Significant Bit) và hỗ trợ chèn hình mờ số (watermarking)."
+  },
+  {
+    "id": 28,
+    "origIndex": 28,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 28,
+    "file": "Screenshot 2026-11-15 190415.png",
+    "question": "What is steganography?",
+    "options": {
+      "A": "A method for securely transferring files over the internet",
+      "B": "A technique for hiding data within other data",
+      "C": "A tool for encrypting email communications",
+      "D": "A method for detecting network intrusions"
+    },
+    "answer": "B",
+    "explanation": "Steganography (nghệ thuật giấu tin) là kỹ thuật ẩn giấu sự tồn tại của thông điệp/dữ liệu bí mật vào bên trong một tập tin mang vỏ bọc bình thường khác (như ảnh PNG/JPG, file âm thanh MP3, video MP4, hoặc văn bản), khác với Cryptography (mã hóa làm xáo trộn nội dung nhưng ai cũng biết có tin nhắn)."
+  },
+  {
+    "id": 29,
+    "origIndex": 29,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 29,
+    "file": "Screenshot 2026-11-15 190417.png",
+    "question": "What is a primary method used to uncover latent data during a forensic investigation?",
+    "options": {
+      "A": "Running a standard antivirus scan",
+      "B": "Using specialized forensic tools to analyze disk images",
+      "C": "Updating the operating system to the latest patch",
+      "D": "Defragmenting the hard drive"
+    },
+    "answer": "B",
+    "explanation": "Dữ liệu tiềm ẩn (Latent Data - như file đã bị xóa, slack space, unallocated space) không thể nhìn thấy bằng các công cụ thông thường của hệ điều hành. Điều tra viên bắt buộc phải sử dụng các bộ công cụ pháp y số chuyên dụng (như Autopsy, EnCase, FTK) để phân tích hình ảnh ổ đĩa và trích xuất dữ liệu thô."
+  },
+  {
+    "id": 30,
+    "origIndex": 30,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 30,
+    "file": "Screenshot 2026-11-15 190420.png",
+    "question": "What is latent data?",
+    "options": {
+      "A": "Data that is currently being accessed and modified by active users",
+      "B": "Data that is hidden or not immediately visible but can be recovered",
+      "C": "Data that is permanently and securely deleted beyond recovery",
+      "D": "Data that is stored directly in the CPU cache"
+    },
+    "answer": "B",
+    "explanation": "Latent data (dữ liệu tiềm ẩn) là dữ liệu tồn tại trên thiết bị lưu trữ nhưng bị ẩn đi hoặc người dùng bình thường không nhìn thấy được trong File Explorer (chẳng hạn như file đã xóa nhưng chưa bị ghi đè, khoảng trống đệm File Slack, RAM Slack, bộ nhớ ảo Swap/Pagefile)."
+  },
+  {
+    "id": 31,
+    "origIndex": 31,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 31,
+    "file": "Screenshot 2026-11-15 190422.png",
+    "question": "Why is drive slack (slack space) significant in digital forensics?",
+    "options": {
+      "A": "It affects the read and write speed of data retrieval",
+      "B": "It can contain remnants of previously deleted files and sensitive information",
+      "C": "It determines the total storage capacity of a drive",
+      "D": "It is used by Windows to store system restore points"
+    },
+    "answer": "B",
+    "explanation": "Drive Slack (khoảng trống thừa cuối cluster khi kích thước file nhỏ hơn kích thước cluster) rất quan trọng trong điều tra số vì khi file mới được ghi, phần cluster thừa phía sau sẽ không bị xóa mà vẫn giữ nguyên các mẩu dữ liệu cũ (remnants) của các file từng tồn tại trước đó, có thể chứa mật khẩu, email hoặc đoạn chat nhạy cảm."
+  },
+  {
+    "id": 32,
+    "origIndex": 32,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 32,
+    "file": "Screenshot 2026-11-15 190424.png",
+    "question": "What is the primary function of a file system?",
+    "options": {
+      "A": "To manage and organize files on a storage device",
+      "B": "To enhance network security and filter packets",
+      "C": "To increase CPU performance and clock speed",
+      "D": "To monitor system temperature and cooling"
+    },
+    "answer": "A",
+    "explanation": "Hệ thống tập tin (File System - như NTFS, FAT32, exFAT, ext4) có chức năng cơ bản là cấu trúc, quản lý, đặt tên, lưu trữ và tổ chức các tập tin dữ liệu và thư mục trên thiết bị lưu trữ vật lý."
+  },
+  {
+    "id": 33,
+    "origIndex": 33,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 33,
+    "file": "Screenshot 2026-11-15 190427.png",
+    "question": "What is the goal of quality assurance (QA) in forensic labs?",
+    "options": {
+      "A": "To increase the number of staff members in the lab",
+      "B": "To produce reliable and accurate results that withstand legal scrutiny",
+      "C": "To automate all investigations without human intervention",
+      "D": "To replace standard operating procedures (SOPs)"
+    },
+    "answer": "B",
+    "explanation": "Mục tiêu cốt lõi của Đảm bảo chất lượng (Quality Assurance - QA) trong các phòng thí nghiệm pháp y kỹ thuật số là đảm bảo mọi quy trình phân tích đều đạt độ chuẩn xác, tin cậy cao nhất, tuân thủ các tiêu chuẩn quốc tế (như ISO/IEC 17025) để kết quả giám định có giá trị pháp lý vững chắc trước tòa án."
+  },
+  {
+    "id": 34,
+    "origIndex": 34,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 34,
+    "file": "Screenshot 2026-11-15 190430.png",
+    "question": "When digital evidence is stored in a forensic laboratory, what measures should be taken to ensure its integrity and authenticity?",
+    "options": {
+      "A": "Regularly updating antivirus software on storage devices",
+      "B": "Implementing access controls and encryption on storage systems",
+      "C": "Using write-blocking devices to prevent data alteration during ongoing storage",
+      "D": "Creating redundant copies of evidence to minimize the risk of loss"
+    },
+    "answer": "B",
+    "explanation": "Khi lưu trữ chứng cứ số trong phòng giám định (storage phase), biện pháp chuẩn mực bắt buộc là thiết lập kiểm soát truy cập nghiêm ngặt (Access Controls - phân quyền ai được tiếp cận) và áp dụng mã hóa bảo mật (Encryption) trên hệ thống lưu trữ nhằm chống rò rỉ, truy cập trái phép hoặc giả mạo chứng cứ."
+  },
+  {
+    "id": 35,
+    "origIndex": 35,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 35,
+    "file": "Screenshot 2026-11-15 190432.png",
+    "question": "Which of the following is a best practice for evidence collection in digital forensics?",
+    "options": {
+      "A": "Ignoring volatile data as it may change over time",
+      "B": "Using untested tools to expedite data collection",
+      "C": "Documenting the chain of custody thoroughly during collection",
+      "D": "Modifying evidence files to verify their integrity"
+    },
+    "answer": "C",
+    "explanation": "Ghi chép và duy trì Nhật ký chuỗi hành trình chứng cứ (Chain of Custody) một cách tỉ mỉ ngay từ khâu thu thập là nguyên tắc sống còn trong điều tra số. Bất kỳ sự thiếu sót nào trong việc ghi nhận ai thu thập, vào lúc nào, bảo quản ra sao đều có thể khiến chứng cứ bị bác bỏ tại tòa án."
+  },
+  {
+    "id": 36,
+    "origIndex": 36,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 36,
+    "file": "Screenshot 2026-11-15 190435.png",
+    "question": "What is the main difference between accreditation and certification in digital forensics?",
+    "options": {
+      "A": "Accreditation is faster and cheaper than certification",
+      "B": "Accreditation applies to laboratories/institutions, while certification applies to individual examiners",
+      "C": "Certification is mandatory for laboratories, while accreditation is optional",
+      "D": "Accreditation verifies software tools, while certification verifies hardware"
+    },
+    "answer": "B",
+    "explanation": "Trong lĩnh vực pháp y kỹ thuật số: 'Accreditation' (Công nhận) là việc đánh giá và cấp chuẩn cho toàn bộ cơ sở/phòng thí nghiệm (Forensic Laboratory, ví dụ ISO/IEC 17025, ASCLD/LAB). Còn 'Certification' (Chứng chỉ nghề nghiệp) là đánh giá năng lực, kiến thức của từng cá nhân giám định viên (Forensic Examiner, ví dụ EnCE, GCFE, CHFI)."
+  },
+  {
+    "id": 37,
+    "origIndex": 37,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 37,
+    "file": "Screenshot 2026-11-15 190437.png",
+    "question": "What is the primary purpose of a cryptographic hash function in digital forensics?",
+    "options": {
+      "A": "To compress large files for storage efficiency",
+      "B": "To decrypt password-protected partitions",
+      "C": "To verify the integrity of evidence by generating a unique digital fingerprint",
+      "D": "To hide files from unauthorized view"
+    },
+    "answer": "C",
+    "explanation": "Hàm băm mật mã (như MD5, SHA-1, SHA-256) tạo ra một chuỗi ký tự cố định duy nhất (dấu vân tay kỹ thuật số) đại diện cho nội dung tập tin hoặc ổ đĩa. Nếu dữ liệu bị thay đổi dù chỉ 1 bit, giá trị hash sẽ thay đổi hoàn toàn. Đối chiếu mã hash trước và sau khi điều tra chứng minh chứng cứ không hề bị thay đổi hay can thiệp."
+  },
+  {
+    "id": 38,
+    "origIndex": 38,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 38,
+    "file": "Screenshot 2026-11-15 190439.png",
+    "question": "What is a major advantage of using a hardware write-blocker over a software write-blocker?",
+    "options": {
+      "A": "It physically prevents any write commands from reaching the storage drive at the hardware controller level",
+      "B": "It operates without needing any physical cables",
+      "C": "It is completely free and built into all operating systems",
+      "D": "It speeds up the read transfer rate of mechanical drives tenfold"
+    },
+    "answer": "A",
+    "explanation": "Hardware Write-Blocker (thiết bị chống ghi phần cứng) chặn đứng các tín hiệu ghi (Write commands) ngay từ mức bus/phần cứng trước khi lệnh đến được bộ điều khiển của ổ đĩa gốc, loại bỏ hoàn toàn rủi ro hệ điều hành hoặc phần mềm tự ý ghi đè dữ liệu lên vật chứng."
+  },
+  {
+    "id": 39,
+    "origIndex": 39,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 39,
+    "file": "Screenshot 2026-11-15 190441.png",
+    "question": "Which of the following is an open, non-proprietary standard forensic image format?",
+    "options": {
+      "A": "EnCase E01 format",
+      "B": "FTK SMART format",
+      "C": "Advanced Forensic Format (AFF) and Raw/DD image format",
+      "D": "VMware VMDK virtual disk"
+    },
+    "answer": "C",
+    "explanation": "Định dạng Raw (bit-stream .dd/.raw) và Advanced Forensic Format (AFF - do Simson Garfinkel phát triển) là các định dạng ảnh pháp y mở, không độc quyền, cho phép mọi công cụ điều tra phân tích mà không bị lệ thuộc vào bản quyền của hãng nào."
+  },
+  {
+    "id": 40,
+    "origIndex": 40,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 40,
+    "file": "Screenshot 2026-11-15 190444.png",
+    "question": "What is unallocated space on a storage drive?",
+    "options": {
+      "A": "Space reserved exclusively by the BIOS/UEFI firmware",
+      "B": "Clusters that are not currently allocated to any active file by the file system, which may contain deleted data",
+      "C": "Space occupied by operating system kernel modules",
+      "D": "Damaged bad sectors that cannot be accessed"
+    },
+    "answer": "B",
+    "explanation": "Unallocated Space (không gian chưa cấp phát) là các cluster trên ổ đĩa đang được hệ thống tập tin đánh dấu là trống và sẵn sàng để ghi dữ liệu mới. Khi người dùng xóa file, hệ điều hành chỉ xóa con trỏ trong bảng phân bổ, nội dung thực sự của file vẫn nằm trong Unallocated Space cho đến khi bị ghi đè."
+  },
+  {
+    "id": 41,
+    "origIndex": 41,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 41,
+    "file": "Screenshot 2026-11-15 190447.png",
+    "question": "What is the primary role of the Master File Table ($MFT) in the NTFS file system?",
+    "options": {
+      "A": "To store internet browsing history and cache files",
+      "B": "To monitor network throughput in real time",
+      "C": "To act as a central catalog that maintains records of all files and directories on the NTFS volume",
+      "D": "To encrypt user passwords in the SAM hive"
+    },
+    "answer": "C",
+    "explanation": "Trong hệ thống tập tin NTFS, $MFT (Master File Table) là cơ sở dữ liệu quan trọng nhất. Mỗi file và thư mục trên phân vùng NTFS đều có ít nhất một bản ghi (record) 1024 bytes trong $MFT chứa tên file, thuộc tính kích thước, quyền bảo mật, timestamp ($STANDARD_INFORMATION, $FILE_NAME) và vị trí các cluster chứa dữ liệu ($DATA)."
+  },
+  {
+    "id": 42,
+    "origIndex": 42,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 42,
+    "file": "Screenshot 2026-11-15 190449.png",
+    "question": "What is the Registry in the Windows operating system?",
+    "options": {
+      "A": "A folder storing temporary files downloaded from web browsers",
+      "B": "A central hierarchical database that stores configuration settings and options for the OS, hardware, and applications",
+      "C": "A backup tool for restoring deleted hard drive partitions",
+      "D": "A dedicated firewall for monitoring outgoing network packets"
+    },
+    "answer": "B",
+    "explanation": "Windows Registry là cơ sở dữ liệu phân cấp trung tâm chứa mọi thông tin cấu hình cấu trúc hệ thống Windows: thông tin người dùng, phần cứng, phần mềm cài đặt, thiết bị USB từng cắm vào máy, mạng Wi-Fi từng kết nối, và các khóa khởi động cùng hệ thống."
+  },
+  {
+    "id": 43,
+    "origIndex": 43,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 43,
+    "file": "Screenshot 2026-11-15 190451.png",
+    "question": "What is the purpose of Volume Shadow Copy (VSC) in Windows forensics?",
+    "options": {
+      "A": "To compress video files for faster streaming",
+      "B": "To create differential snapshot backups of volume state at specific points in time, preserving historical copies of files",
+      "C": "To hide malicious executables from antivirus scanners",
+      "D": "To manage printer spooler jobs"
+    },
+    "answer": "B",
+    "explanation": "Volume Shadow Copy Service (VSS) tạo ra các bản chụp (Snapshots) của toàn bộ phân vùng ổ đĩa theo thời gian. Trong điều tra số, VSS là 'cỗ máy thời gian' giúp điều tra viên khôi phục lại các phiên bản cũ của tài liệu, cấu hình registry trong quá khứ ngay cả khi nghi phạm đã cố tình xóa hoặc chỉnh sửa."
+  },
+  {
+    "id": 44,
+    "origIndex": 44,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 44,
+    "file": "Screenshot 2026-11-15 190453.png",
+    "question": "What is the primary function of Windows Event Logs (.evtx)?",
+    "options": {
+      "A": "To record significant system, application, and security audit events with precise timestamps",
+      "B": "To block incoming network connections from unauthorized IP addresses",
+      "C": "To format unallocated clusters on external storage drives",
+      "D": "To speed up application launch times in memory"
+    },
+    "answer": "A",
+    "explanation": "Windows Event Logs (.evtx) là kho nhật ký ghi lại mọi biến cố trọng yếu của hệ điều hành: sự kiện đăng nhập/đăng xuất (Logon/Logoff - Event ID 4624/4625), dịch vụ được cài đặt (Event ID 7045), thực thi lệnh, lỗi ứng dụng, giúp tái hiện chính xác trình tự thời gian hành động của thủ phạm."
+  },
+  {
+    "id": 45,
+    "origIndex": 45,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 45,
+    "file": "Screenshot 2026-11-15 190456.png",
+    "question": "What is the function of Prefetch files (.pf) in Windows operating systems from a forensic perspective?",
+    "options": {
+      "A": "To encrypt user documents on the desktop",
+      "B": "To track web search keywords in Google Chrome",
+      "C": "To repair corrupted master boot records automatically",
+      "D": "To optimize application launch times and record evidence of application execution, timestamps, and run count"
+    },
+    "answer": "D",
+    "explanation": "Prefetch được Windows tạo ra trong thư mục C:\\Windows\\Prefetch để tối ưu hóa tốc độ nạp ứng dụng. Với điều tra viên, file .pf là bằng chứng đanh thép chứng minh một phần mềm độc hại hoặc công cụ bẻ khóa đã từng được thực thi trên máy, kèm theo thời điểm chạy gần nhất (lên tới 8 mốc thời gian trên Win 10/11) và số lần chạy (Run count)."
+  },
+  {
+    "id": 46,
+    "origIndex": 46,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 46,
+    "file": "Screenshot 2026-11-15 190458.png",
+    "question": "What is the difference between logical and physical acquisition of a cell phone?",
+    "options": {
+      "A": "Logical acquisition is faster and includes unallocated deleted data, while physical acquisition does not",
+      "B": "Physical acquisition creates a bit-by-bit copy of all flash memory including deleted data, while logical acquisition extracts active files via the OS API",
+      "C": "Logical acquisition requires removing the battery and chip, while physical acquisition does not",
+      "D": "Physical acquisition only extracts contact lists and call logs"
+    },
+    "answer": "B",
+    "explanation": "Thu thập logic (Logical Acquisition) trích xuất dữ liệu thông qua giao tiếp API của hệ điều hành điện thoại, chỉ lấy được các file hiện hành (tin nhắn, danh bạ, ảnh đang tồn tại). Trong khi đó, thu thập vật lý (Physical Acquisition) tạo bản sao bit-by-bit toàn bộ bộ nhớ flash, cho phép khôi phục cả dữ liệu đã bị xóa nằm trong không gian chưa cấp phát."
+  },
+  {
+    "id": 47,
+    "origIndex": 47,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 47,
+    "file": "Screenshot 2026-11-15 190500.png",
+    "question": "Which of the following could undermine the credibility of a digital forensic expert's testimony in court?",
+    "options": {
+      "A": "The expert has extensive experience and industry certifications",
+      "B": "The expert followed standard operating procedures and documented all steps",
+      "C": "The analysis is based on outdated, untested, or unvalidated techniques",
+      "D": "The findings are consistent with the physical evidence presented"
+    },
+    "answer": "C",
+    "explanation": "Theo tiêu chuẩn Daubert và Frye về chứng cứ chuyên môn trước tòa án, lời khai của giám định viên sẽ bị bác bỏ hoặc mất uy tín nghiêm trọng nếu phương pháp/công cụ phân tích không được kiểm chứng khoa học, lỗi thời, không tuân thủ quy trình chuẩn hoặc không được cộng đồng khoa học pháp y công nhận."
+  },
+  {
+    "id": 48,
+    "origIndex": 48,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 48,
+    "file": "Screenshot 2026-11-15 190502.png",
+    "question": "What is the legal implication of a user's 'reasonable expectation of privacy' in digital forensics?",
+    "options": {
+      "A": "The user is legally obligated to encrypt all data on their devices",
+      "B": "It influences whether law enforcement is required to obtain a search warrant before searching devices",
+      "C": "It completely overrides all criminal search and seizure laws",
+      "D": "It applies only to corporate email accounts"
+    },
+    "answer": "B",
+    "explanation": "'Kỳ vọng hợp lý về quyền riêng tư' (Reasonable Expectation of Privacy - án lệ Katz v. United States theo Tu chính án thứ tư Hoa Kỳ) xác định ranh giới pháp lý: nếu một người có kỳ vọng riêng tư hợp lý đối với dữ liệu trên điện thoại hay máy tính cá nhân của họ, cơ quan chức năng bắt buộc phải có lệnh khám xét (Search Warrant) của thẩm phán trước khi thu giữ và kiểm tra."
+  },
+  {
+    "id": 49,
+    "origIndex": 49,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 49,
+    "file": "Screenshot 2026-11-15 190505.png",
+    "question": "What is data sampling in the context of Electronically Stored Information (ESI)?",
+    "options": {
+      "A": "The process of converting paper records into digital scanned documents",
+      "B": "Selecting a representative subset of data from a larger dataset for analysis to reduce discovery costs and time",
+      "C": "Randomly deleting files to save storage space during investigation",
+      "D": "The procedure of backing up electronic data to cold storage tapes"
+    },
+    "answer": "B",
+    "explanation": "Trong quy trình E-Discovery (Thu thập chứng cứ điện tử ESI), khi khối lượng dữ liệu lên đến hàng Terabyte hoặc hàng triệu email, phương pháp lấy mẫu dữ liệu (Data Sampling) được áp dụng: chọn ra một tập hợp con đại diện có ý nghĩa thống kê để phân tích, giúp tiết kiệm chi phí và thời gian giám định mà vẫn đảm bảo tính chính xác."
+  },
+  {
+    "id": 50,
+    "origIndex": 50,
+    "examTitle": "Đề FA25 - FE",
+    "qNum": 50,
+    "file": "Screenshot 2026-11-15 190508.png",
+    "question": "Identify the digital evidence from the following list:",
+    "options": {
+      "A": "A social media post on a user's profile",
+      "B": "A handwritten diary notebook",
+      "C": "A printed paper poster on a wall",
+      "D": "A sealed physical envelope with a paper letter inside"
+    },
+    "answer": "A",
+    "explanation": "Chứng cứ kỹ thuật số (Digital Evidence) là thông tin hoặc dữ liệu có giá trị chứng minh được lưu trữ hoặc truyền tải dưới dạng nhị phân/kỹ thuật số. Bài đăng trên mạng xã hội (Facebook, X, Instagram) được lưu trữ trên máy chủ đám mây dưới dạng số là chứng cứ kỹ thuật số điển hình, khác với nhật ký viết tay hay thư giấy vật lý."
+  },
+  {
+    "id": 51,
+    "origIndex": 51,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 2,
+    "file": "Screenshot 2026-11-15 205438.png",
+    "question": "Which of the following is a common method used for live collection in digital forensics?",
+    "options": {
+      "A": "Shutting down the system immediately to create a disk image",
+      "B": "Running automated scripts or specialized tools to extract data from memory (RAM)",
+      "C": "Using write-blocking devices to prevent data alteration on RAM",
+      "D": "Disconnecting the power cable immediately to prevent data transmission"
+    },
+    "answer": "B",
+    "explanation": "Khi thực hiện thu thập trực tiếp trên hệ thống đang chạy (Live Collection), phương pháp chuẩn là sử dụng các công cụ/script tự động hóa đáng tin cậy đã được xác thực (như DumpIt, FTK Imager CLI, LiME) chạy từ USB chuyên dụng để chụp ảnh bộ nhớ RAM mà giảm thiểu tối đa sự xáo trộn đến hệ thống đích."
+  },
+  {
+    "id": 52,
+    "origIndex": 52,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 3,
+    "file": "Screenshot 2026-11-15 205448.png",
+    "question": "What is the primary reason for isolating cell phones during digital forensic investigations?",
+    "options": {
+      "A": "To prevent the spread of malware to other devices on the lab network",
+      "B": "To ensure that cell phone battery does not overheat during imaging",
+      "C": "To minimize the risk of physical screen damage to the device during analysis",
+      "D": "To prevent unauthorized remote access, incoming signals, or remote wiping of evidence"
+    },
+    "answer": "D",
+    "explanation": "Điện thoại thông minh hiện đại luôn có tính năng xóa dữ liệu từ xa (Remote Wipe qua Find My iPhone, Google Find My Device) hoặc nhận tin nhắn mới ghi đè tin nhắn cũ. Việc cô lập điện thoại vào túi Faraday (Faraday Bag) hoặc bật Airplane Mode chặn toàn bộ sóng vô tuyến (Cellular, Wi-Fi, Bluetooth) nhằm ngăn chặn tuyệt đối việc kẻ gian xóa sạch chứng cứ từ xa."
+  },
+  {
+    "id": 53,
+    "origIndex": 53,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 4,
+    "file": "Screenshot 2026-11-15 205525.png",
+    "question": "What is the primary purpose of understanding the order of volatility in digital forensics?",
+    "options": {
+      "A": "To prioritize evidence collection based on the likelihood of data loss and volatility",
+      "B": "To determine the chronological sequence of events during a cyber incident",
+      "C": "To identify the most critical pieces of evidence for analysis and preservation",
+      "D": "To classify digital evidence based on its level of encryption and security"
+    },
+    "answer": "A",
+    "explanation": "Nguyên tắc 'Thứ tự ưu tiên thu thập dữ liệu khả biến' (Order of Volatility theo RFC 3227) giúp điều tra viên biết dữ liệu nào dễ mất nhất để ưu tiên thu thập trước: Bộ nhớ đệm thanh ghi CPU -> RAM / Bảng định tuyến mạng -> Ổ đĩa tạm thời -> Ổ đĩa cứng -> Phương tiện lưu trữ từ tính / lưu trữ từ xa."
+  },
+  {
+    "id": 54,
+    "origIndex": 54,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 5,
+    "file": "Screenshot 2026-11-15 205530.png",
+    "question": "Which category of GPS units provides hands-free access to mobile phones via Bluetooth, allowing recovery of call logs, address book, and SMS messages?",
+    "options": {
+      "A": "Simple units",
+      "B": "Smart units",
+      "C": "Hybrid units",
+      "D": "Connected units"
+    },
+    "answer": "B",
+    "explanation": "Thiết bị GPS thông minh (Smart Units - hoặc Converged Devices) được tích hợp Bluetooth và khả năng kết nối rảnh tay với điện thoại di động. Khi đồng bộ với smartphone, bộ nhớ của GPS Smart Unit thường lưu lại bản sao của danh bạ, nhật ký cuộc gọi và tin nhắn SMS, trở thành nguồn chứng cứ phụ đắt giá cho điều tra viên."
+  },
+  {
+    "id": 55,
+    "origIndex": 55,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 6,
+    "file": "Screenshot 2026-11-15 205534.png",
+    "question": "Which tool collects data from Blackberries, iTunes backups, and SD cards, and is designed to integrate with the EnCase Forensic suite for further investigation?",
+    "options": {
+      "A": "Paraben Device Seizure",
+      "B": "AccessData's MPE+",
+      "C": "EnCase Smartphone Examiner",
+      "D": "Oxygen Forensic Suite"
+    },
+    "answer": "C",
+    "explanation": "EnCase Smartphone Examiner (trước đây là một mô-đun chuyên dụng của Guidance Software) được thiết kế đặc thù để thu thập dữ liệu từ điện thoại thông minh, bản sao lưu iTunes, điện thoại BlackBerry, thẻ nhớ SD và tích hợp liền mạch vào hệ sinh thái EnCase Forensic để điều tra viên phân tích tập trung."
+  },
+  {
+    "id": 56,
+    "origIndex": 58,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 9,
+    "file": "Screenshot 2026-11-15 205559.png",
+    "question": "What type of GPS data represents specific geographic locations marked and saved deliberately by the user?",
+    "options": {
+      "A": "Waypoints",
+      "B": "Track points",
+      "C": "Track logs",
+      "D": "Satellite ephemeris data"
+    },
+    "answer": "A",
+    "explanation": "Waypoints (điểm mốc/tọa độ đích) là các vị trí địa lý cụ thể (kinh độ, vĩ độ) mà người dùng chủ động đánh dấu và lưu vào bộ nhớ thiết bị GPS (ví dụ: 'Nhà riêng', 'Điểm hẹn', 'Trạm xăng')."
+  },
+  {
+    "id": 57,
+    "origIndex": 59,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 10,
+    "file": "Screenshot 2026-11-15 205603.png",
+    "question": "What is the purpose of Prefetch files on Windows operating systems?",
+    "options": {
+      "A": "To accelerate application launch times and optimize performance while recording execution metadata",
+      "B": "To encrypt user files in case of system failure",
+      "C": "To create system restore checkpoints automatically",
+      "D": "To scan incoming network traffic for malicious signatures"
+    },
+    "answer": "A",
+    "explanation": "Mục đích ban đầu của cơ chế Windows Prefetch là nạp sẵn các trang nhớ cần thiết để tăng tốc khởi động ứng dụng. Nhưng trong điều tra số, các tệp .pf trong C:\\Windows\\Prefetch là mỏ vàng ghi lại tên chương trình đã thực thi, đường dẫn tuyệt đối, thời điểm chạy và danh sách các DLL được nạp."
+  },
+  {
+    "id": 58,
+    "origIndex": 60,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 12,
+    "file": "Screenshot 2026-11-15 205613.png",
+    "question": "What does the MAC timestamp acronym commonly stand for in file systems forensics?",
+    "options": {
+      "A": "Modified, Accessed, and Created timestamps",
+      "B": "Media Access Control physical address",
+      "C": "Master Allocation Cluster index",
+      "D": "Memory Allocation Checksum"
+    },
+    "answer": "A",
+    "explanation": "Trong phân tích hệ thống tập tin, MAC (hoặc MACB) là viết tắt của: Modified (Thời gian chỉnh sửa nội dung lần cuối), Accessed (Thời gian đọc/truy cập lần cuối), Created / Born (Thời gian tệp được tạo trên volume này). MFT của NTFS lưu trữ 2 bộ thuộc tính thời gian này trong $STANDARD_INFORMATION và $FILE_NAME."
+  },
+  {
+    "id": 59,
+    "origIndex": 61,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 13,
+    "file": "Screenshot 2026-11-15 205622.png",
+    "question": "What is the primary function of the SAM (Security Account Manager) database file in Windows?",
+    "options": {
+      "A": "To store internet browsing cache and cookie sessions",
+      "B": "To store local user account credentials and password hashes (NTLM/LM)",
+      "C": "To maintain firewall filtering rules",
+      "D": "To allocate cluster sectors on the hard drive"
+    },
+    "answer": "B",
+    "explanation": "SAM (Security Account Manager) nằm tại C:\\Windows\\System32\\config\\SAM là file hive Registry chứa thông tin tài khoản người dùng cục bộ, bao gồm tên đăng nhập, SID (Security Identifier), nhóm đặc quyền và các chuỗi băm mật khẩu (LM/NTLM hash)."
+  },
+  {
+    "id": 60,
+    "origIndex": 62,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 15,
+    "file": "Screenshot 2026-11-15 205630.png",
+    "question": "What is the primary purpose of examining browser cache during a digital forensic investigation?",
+    "options": {
+      "A": "To optimize the web browser's network rendering speed",
+      "B": "To delete temporary internet files to free up disk space",
+      "C": "To discover web pages, downloaded images, search queries, and content viewed by the user",
+      "D": "To change the default search engine configuration"
+    },
+    "answer": "C",
+    "explanation": "Bộ nhớ đệm trình duyệt (Browser Cache) lưu trữ bản sao cục bộ của các trang web, hình ảnh, mã script và tài liệu mà người dùng đã tải về khi duyệt web. Phân tích cache giúp điều tra viên phục hồi các bức ảnh nghi phạm đã xem, trang web đã ghé thăm ngay cả khi họ đã xóa lịch sử duyệt web."
+  },
+  {
+    "id": 61,
+    "origIndex": 63,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 16,
+    "file": "Screenshot 2026-11-15 205634.png",
+    "question": "What critical role does an IP address play in tracing an email investigation?",
+    "options": {
+      "A": "It automatically decrypts the encrypted body of the email",
+      "B": "It identifies the originating network device or mail relay server involved in sending the email",
+      "C": "It proves the exact legal name of the person who typed the email",
+      "D": "It permanently prevents spam emails from reaching the inbox"
+    },
+    "answer": "B",
+    "explanation": "Địa chỉ IP (Internet Protocol) ghi trong dòng Received của header email là bằng chứng then chốt chỉ định máy tính/thiết bị mạng hoặc máy chủ thư điện tử (SMTP relay) nào đã phát đi bức thư đó, từ đó điều tra viên có thể gửi trát yêu cầu nhà cung cấp dịch vụ ISP cung cấp thông tin thuê bao."
+  },
+  {
+    "id": 62,
+    "origIndex": 65,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 18,
+    "file": "Screenshot 2026-11-15 205643.png",
+    "question": "Which protocol is primarily used for sending email messages across the Internet and between mail servers?",
+    "options": {
+      "A": "Simple Mail Transfer Protocol (SMTP)",
+      "B": "Post Office Protocol 3 (POP3)",
+      "C": "Internet Message Access Protocol (IMAP)",
+      "D": "Hypertext Transfer Protocol (HTTP)"
+    },
+    "answer": "A",
+    "explanation": "SMTP (Simple Mail Transfer Protocol - thường sử dụng cổng 25, 465 hoặc 587) là giao thức chuẩn mạng Internet được thiết kế riêng cho việc chuyển phát và đẩy email từ máy khách lên máy chủ thư và giữa các máy chủ mail với nhau. POP3 và IMAP chỉ dùng để tải/đọc thư về client."
+  },
+  {
+    "id": 63,
+    "origIndex": 66,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 19,
+    "file": "Screenshot 2026-11-15 205647.png",
+    "question": "What distinguishes a Local Area Network (LAN) from a Wide Area Network (WAN)?",
+    "options": {
+      "A": "A LAN is used exclusively for connecting devices within a single home",
+      "B": "A LAN connects computers and devices within a limited geographic area (office/building), while a WAN connects multiple LANs across large geographical distances",
+      "C": "A WAN is used for personal communications, while a LAN is used for international business",
+      "D": "A WAN uses IPv4 addresses, while a LAN uses IPv6 addresses"
+    },
+    "answer": "B",
+    "explanation": "Sự khác biệt cơ bản nhất giữa mạng cục bộ (LAN) và mạng diện rộng (WAN) là phạm vi địa lý: LAN giới hạn trong một khu vực hẹp (như tòa nhà văn phòng, trường học, hộ gia đình), trong khi WAN kết nối nhiều mạng LAN lại với nhau trên phạm vi một thành phố, quốc gia hoặc toàn cầu (Internet là ví dụ điển hình của WAN)."
+  },
+  {
+    "id": 64,
+    "origIndex": 67,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 20,
+    "file": "Screenshot 2026-11-15 205650.png",
+    "question": "What is the primary role of a firewall in network security?",
+    "options": {
+      "A": "To encrypt all data transmitted across the internal network",
+      "B": "To filter inbound and outbound network traffic, allowing or denying passage based on security rules",
+      "C": "To provide automatic software patches to all connected network devices",
+      "D": "To monitor user behavior and generate payroll reports"
+    },
+    "answer": "B",
+    "explanation": "Tường lửa (Firewall) đóng vai trò là rào chắn an ninh kiểm soát và giám sát mọi lưu lượng mạng vào/ra (inbound/outbound traffic). Nó căn cứ vào bộ quy tắc bảo mật (Security Rules: IP nguồn/đích, cổng, giao thức) để quyết định cho phép (Allow) hoặc chặn đứng (Deny/Block) các gói tin."
+  },
+  {
+    "id": 65,
+    "origIndex": 68,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 21,
+    "file": "Screenshot 2026-11-15 205655.png",
+    "question": "What is one of the key challenges associated with collecting evidence from router logs in a network investigation?",
+    "options": {
+      "A": "Router logs are always fully encrypted and impossible to read",
+      "B": "Router logs are volatile (often stored in volatile RAM) and can be easily overwritten or lost if the router is rebooted",
+      "C": "Router logs do not contain any relevant information about network traffic",
+      "D": "Router logs are too large to fit on modern forensic hard drives"
+    },
+    "answer": "B",
+    "explanation": "Nhật ký của bộ định tuyến (Router Logs) thường được lưu trữ trong bộ nhớ đệm RAM của router với dung lượng rất hạn chế. Khi bộ đệm đầy hoặc nếu thiết bị bị khởi động lại (reboot / mất nguồn), toàn bộ log kết nối sẽ bị xóa sạch hoặc bị xoay vòng ghi đè (overwritten), trừ khi router được cấu hình gửi log về máy chủ Syslog tập trung."
+  },
+  {
+    "id": 66,
+    "origIndex": 70,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 23,
+    "file": "Screenshot 2026-11-15 205702.png",
+    "question": "What is the primary difference between live and dead systems in digital forensics?",
+    "options": {
+      "A": "A live system is powered on and active, while a dead system is powered off",
+      "B": "A live system is connected to the internet, while a dead system is not",
+      "C": "A live system is a physical machine, while a dead system is a virtual machine",
+      "D": "A live system is a server, while a dead system is a client computer"
+    },
+    "answer": "A",
+    "explanation": "Khái niệm 'Live System' (Hệ thống sống) chỉ thiết bị đang được cấp nguồn điện và hệ điều hành đang chạy, nơi bộ nhớ RAM còn nguyên vẹn. 'Dead System' (Hệ thống chết/tĩnh) chỉ thiết bị đã bị tắt nguồn hoàn toàn, nơi việc điều tra chỉ có thể thực hiện trên dữ liệu tĩnh lưu trên ổ cứng/bộ nhớ flash."
+  },
+  {
+    "id": 67,
+    "origIndex": 71,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 24,
+    "file": "Screenshot 2026-11-15 205707.png",
+    "question": "In the context of a final forensic report, what does the term 'chain of custody' refer to?",
+    "options": {
+      "A": "The sequence of storage locations for evidence",
+      "B": "The hierarchy of investigators involved in the case",
+      "C": "The documented process that records the chronological handling, transfer, and disposition of evidence",
+      "D": "The legal ownership and copyright of the evidence"
+    },
+    "answer": "C",
+    "explanation": "Chuỗi hành trình chứng cứ (Chain of Custody) là tài liệu pháp lý ghi nhận trình tự thời gian chi tiết: ai đã thu thập chứng cứ, vào thời điểm nào, chuyển giao cho ai, mục đích là gì, bảo quản ở đâu và trong điều kiện nào. Đây là yếu tố quyết định chứng cứ có được tòa án chấp nhận (admissible) hay bị bác bỏ."
+  },
+  {
+    "id": 68,
+    "origIndex": 72,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 26,
+    "file": "Screenshot 2026-11-15 205715.png",
+    "question": "What are the two primary files/components involved in steganography?",
+    "options": {
+      "A": "Carrier file (Cover file) and payload (hidden message)",
+      "B": "Source file and encrypted certificate file",
+      "C": "Container file and database index file",
+      "D": "Cover file and hidden file"
+    },
+    "answer": "D",
+    "explanation": "Trong kỹ thuật giấu tin (Steganography), luôn có hai thành phần cơ bản: 'Cover file' (tệp vỏ bọc/vật mang - ví dụ một bức ảnh phong cảnh bình thường) và 'Hidden file' hoặc 'Payload' (tệp tin bí mật cần giấu bên trong bức ảnh đó). Sau khi nhúng dữ liệu sẽ tạo ra 'Stego file'."
+  },
+  {
+    "id": 69,
+    "origIndex": 73,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 28,
+    "file": "Screenshot 2026-11-15 205723.png",
+    "question": "Which of the following is NOT primarily an encryption technique or full-disk encryption tool?",
+    "options": {
+      "A": "Encrypting File System (EFS)",
+      "B": "BitLocker",
+      "C": "Apple FileVault",
+      "D": "TrueCrypt",
+      "E": "WinRAR"
+    },
+    "answer": "E",
+    "explanation": "EFS, BitLocker (Windows), FileVault (macOS) và TrueCrypt là các hệ thống/công cụ chuyên dụng về mã hóa tệp tin và toàn bộ ổ đĩa (Full Disk Encryption). WinRAR về bản chất là một phần mềm nén tệp tin (File Archiver), dù nó có tính năng phụ là đặt mật khẩu bảo vệ file nén nhưng không phải là công cụ/kỹ thuật mã hóa hệ thống."
+  },
+  {
+    "id": 70,
+    "origIndex": 74,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 29,
+    "file": "Screenshot 2026-11-15 205729.png",
+    "question": "Which of the following is an example of archival data?",
+    "options": {
+      "A": "Current active system logs",
+      "B": "Historical financial records stored on backup magnetic tapes or optical disks",
+      "C": "Temporary internet browsing files",
+      "D": "Active user session authentication data"
+    },
+    "answer": "B",
+    "explanation": "Dữ liệu lưu trữ lịch sử (Archival Data) là dữ liệu tĩnh từ các năm trước hoặc hồ sơ tài chính cũ không còn được truy cập thường xuyên trong hoạt động hàng ngày, được đóng gói và lưu giữ dài hạn trên các phương tiện như băng từ (magnetic tape), đĩa quang (cold storage) để phục vụ mục đích kiểm toán hoặc tuân thủ pháp lý."
+  },
+  {
+    "id": 71,
+    "origIndex": 75,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 31,
+    "file": "Screenshot 2026-11-15 205751.png",
+    "question": "What does 'free space' on a hard drive refer to in digital forensics?",
+    "options": {
+      "A": "Space that is currently used by system files",
+      "B": "Space occupied by installed program binaries",
+      "C": "Space that is currently unallocated and available for new files, but may still retain deleted data",
+      "D": "Space that is permanently reserved for system restore points"
+    },
+    "answer": "C",
+    "explanation": "Không gian trống (Free space / Unallocated space) là các sector/cluster mà bảng phân bổ tệp (như MFT hay FAT) đánh dấu là chưa sử dụng, sẵn sàng để hệ điều hành ghi file mới. Trong điều tra số, 'Free space' không hề trống rỗng mà thường chứa đầy tàn tích dữ liệu của các file đã bị người dùng xóa."
+  },
+  {
+    "id": 72,
+    "origIndex": 76,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 32,
+    "file": "Screenshot 2026-11-15 210018.png",
+    "question": "Why is it important to use validated and tested forensic tools for evidence collection in digital forensics?",
+    "options": {
+      "A": "Validated tools are more expensive but provide faster graphical rendering",
+      "B": "Untested tools can alter or corrupt evidence, rendering it inadmissible in court",
+      "C": "Forensic tools are unnecessary as all evidence can be extracted manually using notepad",
+      "D": "Using multiple unvalidated tools increases the statistical variety of evidence"
+    },
+    "answer": "B",
+    "explanation": "Công cụ pháp y số bắt buộc phải được thử nghiệm và kiểm chứng nghiêm ngặt (theo tiêu chuẩn CFTT của NIST) nhằm đảm bảo chúng hoạt động hoàn toàn chính xác, không ghi đè hoặc làm sai lệch chứng cứ gốc. Sử dụng công cụ chưa được kiểm chứng sẽ khiến toàn bộ chứng cứ bị luật sư bào chữa phản bác và thẩm phán loại bỏ."
+  },
+  {
+    "id": 73,
+    "origIndex": 77,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 33,
+    "file": "Screenshot 2026-11-15 210022.png",
+    "question": "What is the primary purpose of write-blocking devices in digital forensics?",
+    "options": {
+      "A": "To accelerate the disk imaging process by compressing blocks",
+      "B": "To decrypt password-protected BitLocker partitions",
+      "C": "To prevent data alteration or writing to the original storage medium during acquisition",
+      "D": "To scan storage drives for virus and rootkit infections"
+    },
+    "answer": "C",
+    "explanation": "Write-Blocker (Bộ chặn ghi phần cứng hoặc phần mềm) có nhiệm vụ duy nhất nhưng tối quan trọng: cho phép các lệnh đọc (Read) đi qua để tạo ảnh ổ đĩa, đồng thời chặn đứng 100% mọi lệnh ghi (Write) từ máy tính điều tra viên tới ổ cứng nghi phạm, đảm bảo tính nguyên vẹn tuyệt đối cho vật chứng gốc."
+  },
+  {
+    "id": 74,
+    "origIndex": 78,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 34,
+    "file": "Screenshot 2026-11-15 210029.png",
+    "question": "What is the primary reason for isolating cell phones in a Faraday bag during digital forensic investigations?",
+    "options": {
+      "A": "To keep the mobile phone battery cool",
+      "B": "To prevent the smartphone from falling and cracking its screen",
+      "C": "To block all incoming and outgoing radio signals (cellular, Wi-Fi, Bluetooth) to prevent remote wiping or data alteration",
+      "D": "To decrypt user biometric lock patterns"
+    },
+    "answer": "C",
+    "explanation": "Túi Faraday (Faraday Bag) có lớp lót kim loại dẫn điện chặn mọi bức xạ điện từ và sóng vô tuyến (RF Shielding). Khi nhốt điện thoại vào túi Faraday, điện thoại sẽ bị ngắt kết nối hoàn toàn khỏi mạng di động 4G/5G, Wi-Fi, Bluetooth và GPS, ngăn chặn triệt để nguy cơ đồng phạm gửi lệnh xóa sạch dữ liệu từ xa (Remote Wipe)."
+  },
+  {
+    "id": 75,
+    "origIndex": 79,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 35,
+    "file": "Screenshot 2026-11-15 210032.png",
+    "question": "What is RAM slack in digital forensics?",
+    "options": {
+      "A": "The unused space between the end of a file's logical data and the end of that specific sector, which older Windows OS padded with data from RAM",
+      "B": "The memory allocated to the graphics card",
+      "C": "The space inside the pagefile.sys virtual memory",
+      "D": "The unallocated space between disk partitions"
+    },
+    "answer": "A",
+    "explanation": "File Slack gồm 2 phần: RAM Slack và Drive Slack. RAM Slack là khoảng không gian từ byte cuối cùng của tệp đến cuối sector 512 bytes đó. Trên các hệ điều hành cũ (như Windows 95/98), Windows tự động đệm các byte còn lại của sector bằng dữ liệu ngẫu nhiên đang có trong bộ nhớ RAM, vô tình lưu lại các mẩu mật khẩu hoặc văn bản nhạy cảm từ RAM vào ổ cứng."
+  },
+  {
+    "id": 76,
+    "origIndex": 80,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 37,
+    "file": "Screenshot 2026-11-15 210034.png",
+    "question": "What is the role of file carving in digital forensics?",
+    "options": {
+      "A": "To split large disk images into smaller segments for burning onto DVDs",
+      "B": "To extract and recover deleted files based solely on file headers, footers, and internal structure without relying on file system metadata",
+      "C": "To permanently shred confidential corporate documents",
+      "D": "To organize desktop icons automatically"
+    },
+    "answer": "B",
+    "explanation": "File Carving (khắc tệp) là kỹ thuật khôi phục file cực kỳ quan trọng khi cấu trúc thư mục hoặc bảng phân bổ tệp ($MFT, FAT) bị hỏng hoặc bị format. Công cụ khắc tệp (như Scalpel, Foremost, PhotoRec) sẽ quét tuần tự từng sector trong không gian chưa cấp phát để tìm Magic Number đầu (Header) và cuối (Footer) của tệp (ví dụ FF D8 ... FF D9 cho JPG) để cắt lấy tệp nguyên vẹn."
+  },
+  {
+    "id": 77,
+    "origIndex": 81,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 38,
+    "file": "Screenshot 2026-11-15 210037.png",
+    "question": "What is an index.dat file in Internet Explorer and legacy Windows forensics?",
+    "options": {
+      "A": "A system driver configuration script",
+      "B": "An encryption key file for the SAM registry hive",
+      "C": "A hidden binary database file that stores records of web browsing history, typed URLs, cache, and cookies",
+      "D": "A database containing installed printer profiles"
+    },
+    "answer": "C",
+    "explanation": "Trong các phiên bản Internet Explorer truyền thống (từ IE 10 trở về trước), file 'index.dat' là cơ sở dữ liệu nhị phân ẩn mà Windows dùng để ghi nhận chi tiết lịch sử duyệt web, các URL người dùng gõ vào thanh địa chỉ, cookie và nhật ký cache. Kể cả khi người dùng nhấn 'Clear History' trong trình duyệt, các bản ghi trong index.dat vẫn tồn tại."
+  },
+  {
+    "id": 78,
+    "origIndex": 82,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 40,
+    "file": "Screenshot 2026-11-15 210044.png",
+    "question": "What is the primary goal of attribution in digital forensics?",
+    "options": {
+      "A": "Determining the specific individual, group, or entity legally responsible for the cyber incident",
+      "B": "Assigning IP addresses dynamically using DHCP",
+      "C": "Calculating the total financial cost of hardware damage",
+      "D": "Backing up log files to external servers"
+    },
+    "answer": "A",
+    "explanation": "Quy kết trách nhiệm (Attribution) là mục tiêu cao nhất và khó khăn nhất trong điều tra tội phạm mạng: xác định chính xác danh tính của thủ phạm, tổ chức hoặc nhóm tin tặc (APT) đứng sau cuộc tấn công số, vượt qua các lớp ngụy trang proxy, VPN và thông tin giả mạo để đưa thủ phạm ra trước ánh sáng pháp lý."
+  },
+  {
+    "id": 79,
+    "origIndex": 83,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 41,
+    "file": "Screenshot 2026-11-15 210057.png",
+    "question": "What is spoofing in the context of network attacks and digital investigations?",
+    "options": {
+      "A": "Encrypting network traffic using strong mathematical algorithms",
+      "B": "The act of falsifying data or identifiers (such as IP address, MAC, or email header) to impersonate a trusted entity",
+      "C": "Scanning open network ports to discover running services",
+      "D": "Compressing packets to optimize network bandwidth"
+    },
+    "answer": "B",
+    "explanation": "Giả mạo (Spoofing) là kỹ thuật tấn công trong đó kẻ xấu làm giả thông tin định danh (IP Spoofing, MAC Spoofing, Email Spoofing, DNS Spoofing, Caller ID Spoofing) nhằm đánh lừa hệ thống hoặc nạn nhân tin rằng thông điệp đó xuất phát từ một nguồn đáng tin cậy."
+  },
+  {
+    "id": 80,
+    "origIndex": 84,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 42,
+    "file": "Screenshot 2026-11-15 210109.png",
+    "question": "What is the role of digital signatures in digital forensics and cryptography?",
+    "options": {
+      "A": "Ensuring data integrity, proving authenticity, and providing non-repudiation (proof of origin)",
+      "B": "Hiding binary files inside digital audio files",
+      "C": "Speeding up disk defragmentation on mechanical drives",
+      "D": "Converting analog handwritten signatures into raster PNG images"
+    },
+    "answer": "A",
+    "explanation": "Chữ ký số (Digital Signature - dựa trên mật mã khóa công khai PKI) đáp ứng 3 yêu cầu an toàn thông tin cốt lõi: Xác thực danh tính người gửi (Authentication), Đảm bảo tính toàn vẹn không bị sửa đổi (Integrity), và Chống chối bỏ (Non-repudiation - người ký không thể phủ nhận việc mình đã ký văn bản đó)."
+  },
+  {
+    "id": 81,
+    "origIndex": 85,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 43,
+    "file": "Screenshot 2026-11-15 210148.png",
+    "question": "What is the purpose of a cryptographic hashing algorithm like SHA-256 in digital forensics?",
+    "options": {
+      "A": "To compress disk images to one-tenth of their original size",
+      "B": "To generate a unique fixed-length mathematical value to verify the integrity and detect any alteration of digital evidence",
+      "C": "To automatically decrypt encrypted ZIP files",
+      "D": "To scan systems for active Bluetooth signals"
+    },
+    "answer": "B",
+    "explanation": "Thuật toán băm SHA-256 tạo ra chuỗi giá trị 256-bit (64 ký tự hex) cố định cho bất kỳ tệp dữ liệu hay toàn bộ ổ đĩa nào. Nhờ đặc tính chống va chạm cực cao và độ nhạy hiệu ứng thác đổ (avalanche effect), mã SHA-256 là tiêu chuẩn vàng hiện nay để chứng minh vật chứng số nguyên bản 100% không bị can thiệp."
+  },
+  {
+    "id": 82,
+    "origIndex": 86,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 44,
+    "file": "Screenshot 2026-11-15 210153.png",
+    "question": "What is a bit-stream image (forensic copy)?",
+    "options": {
+      "A": "A simple copy-paste of visible files in Windows File Explorer",
+      "B": "A backup copy of only the operating system system files",
+      "C": "An exact bit-by-bit identical duplicate of the physical storage medium, including all sectors, slack space, and unallocated clusters",
+      "D": "A compressed screenshot of the user's desktop display"
+    },
+    "answer": "C",
+    "explanation": "Bản sao lưu bit-stream (Bit-stream Image / Forensic Clone) sao chép tuần tự từng bit từ sector đầu tiên đến sector cuối cùng của ổ đĩa vật lý. Khác với lệnh Copy/Paste thông thường chỉ lấy các file đang hiển thị, Bit-stream image sao chép cả dữ liệu đã xóa trong unallocated space, file slack, boot sector và phân vùng ẩn."
+  },
+  {
+    "id": 83,
+    "origIndex": 87,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 45,
+    "file": "Screenshot 2026-11-15 210157.png",
+    "question": "What is the specific function of a Faraday bag in mobile device forensics?",
+    "options": {
+      "A": "Shielding mobile devices from external electromagnetic fields and radio frequency signals to prevent remote commands or wiping",
+      "B": "Charging the mobile device wirelessly during transit",
+      "C": "Extracting passcode keys via induction coils",
+      "D": "Cooling the processor to prevent thermal throttling"
+    },
+    "answer": "A",
+    "explanation": "Túi Faraday là vật dụng bắt buộc phải có trong bộ kit tác chiến hiện trường của điều tra viên di động. Chức năng duy nhất của nó là triệt tiêu sóng điện từ (Radio Frequency Shielding), ngăn không cho bất kỳ tín hiệu sóng nào (Cellular, GPS, Wi-Fi, Bluetooth) truyền vào hoặc phát ra từ thiết bị, ngăn chặn kẻ tấn công kích hoạt lệnh hủy từ xa."
+  },
+  {
+    "id": 84,
+    "origIndex": 88,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 46,
+    "file": "Screenshot 2026-11-15 210201.png",
+    "question": "Which of the following is NOT typically a native source of forensic evidence automatically generated by smartphone hardware and operating systems?",
+    "options": {
+      "A": "Call detail records (CDR) and call history logs",
+      "B": "Geographic location information (GPS and cell tower coordinates)",
+      "C": "Social Security number (SSN)",
+      "D": "Web browser history and search queries"
+    },
+    "answer": "C",
+    "explanation": "Nhật ký cuộc gọi (CDR), tọa độ định vị GPS và lịch sử trình duyệt web là các tạo tác (artifacts) số được hệ điều hành và phần cứng smartphone tự động thu thập và ghi nhận liên tục trong quá trình sử dụng. Số an sinh xã hội (Social Security Number) là thông tin định danh cá nhân nhân thân, không phải là dữ liệu tự sinh mặc định của thiết bị di động."
+  },
+  {
+    "id": 85,
+    "origIndex": 89,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 47,
+    "file": "Screenshot 2026-11-15 210204.png",
+    "question": "Which of the following is a primary responsibility of a digital forensic expert when providing testimony in court?",
+    "options": {
+      "A": "To interpret digital evidence objectively and explain its technical relevance to the court in clear, understandable terms",
+      "B": "To determine the legal guilt or innocence of the defendant",
+      "C": "To advocate emotionally for the party that hired them",
+      "D": "To act as a member of the jury during deliberation"
+    },
+    "answer": "A",
+    "explanation": "Giám định viên kỹ thuật số tham gia phiên tòa với tư cách là 'Nhân chứng chuyên môn' (Expert Witness). Trách nhiệm cao nhất của giám định viên là tính khách quan, trung thực khoa học: giải thích các chứng cứ kỹ thuật phức tạp bằng ngôn ngữ dễ hiểu để thẩm phán và bồi thẩm đoàn nắm rõ sự thật, chứ không có thẩm quyền phán quyết bị cáo có tội hay vô tội."
+  },
+  {
+    "id": 86,
+    "origIndex": 90,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 48,
+    "file": "Screenshot 2026-11-15 210207.png",
+    "question": "What exactly is a 'reasonable expectation of privacy' in constitutional and digital forensic law?",
+    "options": {
+      "A": "The unrealistic expectation that one's online activities will never be seen by any human",
+      "B": "The legal expectation that certain personal areas, devices, or communications are protected from government intrusion under the law without a warrant",
+      "C": "The expectation that all communications, regardless of location, are completely secret",
+      "D": "The belief that private companies will never sell anonymized advertising data"
+    },
+    "answer": "B",
+    "explanation": "Án lệ Katz v. United States (1967) đưa ra tiêu chuẩn hai bước về 'Kỳ vọng hợp lý về quyền riêng tư': một người thực tế có kỳ vọng bảo mật cho hành vi/dữ liệu của mình, và kỳ vọng đó được xã hội và luật pháp công nhận là chính đáng. Khi có kỳ vọng này, cảnh sát không được tự ý lục soát thiết bị số mà không có trát của tòa án."
+  },
+  {
+    "id": 87,
+    "origIndex": 91,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 49,
+    "file": "Screenshot 2026-11-15 210210.png",
+    "question": "Who is the protection of the Fourth Amendment of the United States Constitution intended for?",
+    "options": {
+      "A": "Exclusively for law enforcement officers during active duty",
+      "B": "Citizens and individuals residing in the United States, protecting them against unreasonable searches and seizures",
+      "C": "Only active-duty military personnel",
+      "D": "Foreign intelligence agencies"
+    },
+    "answer": "B",
+    "explanation": "Tu chính án thứ tư (Fourth Amendment) của Hiến pháp Hoa Kỳ bảo vệ quyền của người dân và công dân trước các hành vi khám xét và thu giữ phi lý (unreasonable searches and seizures) từ phía chính phủ và cơ quan công quyền, yêu cầu phải có lệnh của thẩm phán (Warrant) dựa trên căn cứ có thể xác thực (Probable cause)."
+  },
+  {
+    "id": 88,
+    "origIndex": 92,
+    "examTitle": "Đề SU25 - Final Exam",
+    "qNum": 50,
+    "file": "Screenshot 2026-11-15 210214.png",
+    "question": "What key factor must a digital forensic expert establish to ensure their testimony is admissible under the Daubert standard?",
+    "options": {
+      "A": "The evidence presented is dramatic and emotionally captivating to the jury",
+      "B": "The scientific methods and forensic tools used to gather and analyze the evidence are reliable, peer-reviewed, and widely accepted in the scientific community",
+      "C": "The expert possesses a personal friendship with the judge or prosecutor",
+      "D": "The software used was developed privately by the expert and kept secret"
+    },
+    "answer": "B",
+    "explanation": "Tiêu chuẩn Daubert (Daubert Standard - án lệ Daubert v. Merrell Dow Pharmaceuticals) quy định thẩm phán là người gác cổng (gatekeeper) đối với chứng cứ khoa học. Để lời khai được chấp nhận, phương pháp phân tích phải: có thể kiểm chứng thử nghiệm (testability), đã qua bình duyệt khoa học (peer review), có tỷ lệ sai số đã biết (error rate), và được cộng đồng khoa học pháp y công nhận rộng rãi (general acceptance)."
+  }
+];
+
+    const STORAGE_KEY = 'frs301_v1_study_progress';
+    let userProgress = {
+      answers: {},
+      evaluations: {},
+      starred: {},
+      notes: {}
+    };
+
+    let appSettings = {
+      theme: 'dark',
+      focusCrop: false
+    };
+
+    let activeFilter = 'all';
+    let filteredIndices = [];
+    let currentFilteredPointer = 0;
+    let isCurtainRevealed = false;
+
+    function initApp() {
+      loadSavedData();
+      applySettings();
+      updateFilteredQuestions();
+      renderCurrentQuestion();
+      renderJumpSelect();
+      updateStatsUI();
+      setupKeyListeners();
+    }
+
+    function loadSavedData() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) userProgress = Object.assign(userProgress, JSON.parse(saved));
+      } catch (e) {}
+    }
+
+    function saveProgress() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(userProgress));
+      } catch (e) {}
+      updateStatsUI();
+    }
+
+    function applySettings() {
+      document.body.setAttribute('data-theme', appSettings.theme);
+      updateThemeIcon();
+      if (appSettings.focusCrop) {
+        document.getElementById('image-container').classList.add('focus-crop');
+        document.getElementById('btn-focus-mode').classList.add('active');
+      }
+    }
+
+    function toggleTheme() {
+      appSettings.theme = appSettings.theme === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', appSettings.theme);
+      updateThemeIcon();
+    }
+
+    function updateThemeIcon() {
+      const icon = document.getElementById('theme-icon');
+      if (appSettings.theme === 'dark') {
+        icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+      } else {
+        icon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+      }
+    }
+
+    function setFilter(filter) {
+      activeFilter = filter;
+      document.querySelectorAll('.filter-chip').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === filter);
+      });
+      updateFilteredQuestions();
+      currentFilteredPointer = 0;
+      renderCurrentQuestion();
+      renderJumpSelect();
+    }
+
+    function updateFilteredQuestions() {
+      filteredIndices = [];
+      questions.forEach((q, idx) => {
+        const isStarred = !!userProgress.starred[q.id];
+        const evalVal = userProgress.evaluations[q.id];
+        let pass = false;
+
+        if (activeFilter === 'all') pass = true;
+        else if (activeFilter === 'fa25') pass = (q.examTitle.includes('FA25'));
+        else if (activeFilter === 'su25') pass = (q.examTitle.includes('SU25'));
+        else if (activeFilter === 'starred') pass = isStarred;
+        else if (activeFilter === 'correct') pass = (evalVal === true);
+        else if (activeFilter === 'wrong') pass = (evalVal === false);
+
+        if (pass) filteredIndices.push(idx);
+      });
+
+      if (filteredIndices.length === 0) {
+        filteredIndices = questions.map((_, i) => i);
+      }
+    }
+
+    function getCurrentQuestion() {
+      const qIndex = filteredIndices[currentFilteredPointer] ?? 0;
+      return questions[qIndex];
+    }
+
+    const localImageBlobs = {};
+
+    function getImageUrl(filename) {
+      if (localImageBlobs[filename]) {
+        return localImageBlobs[filename];
+      }
+      // Primary: images/ subfolder
+      return `images/${filename}`;
+    }
+
+    function handleImageError(img) {
+      const curSrc = img.getAttribute('src') || '';
+      const parts = curSrc.split('/');
+      const fname = decodeURIComponent(parts[parts.length - 1]);
+      
+      if (curSrc.startsWith('images/')) {
+        // Fallback 1: try same folder directly
+        img.src = fname;
+      } else if (!curSrc.startsWith('images/') && !curSrc.startsWith('blob:')) {
+        // Fallback 2: try encoded in images
+        img.src = `images/${encodeURIComponent(fname)}`;
+      } else {
+        // Show folder picker fallback banner if image cannot load
+        const banner = document.getElementById('img-fallback-banner');
+        if (banner) banner.style.display = 'flex';
+      }
+    }
+
+    function handleImageLoaded(img) {
+      const banner = document.getElementById('img-fallback-banner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    function loadLocalImagesFolder(event) {
+      const files = event.target.files;
+      if (!files || files.length === 0) return;
+      for (let i = 0; i < files.length; i++) {
+        const f = files[i];
+        localImageBlobs[f.name] = URL.createObjectURL(f);
+      }
+      const banner = document.getElementById('img-fallback-banner');
+      if (banner) banner.style.display = 'none';
+      renderCurrentQuestion();
+    }
+
+    function renderCurrentQuestion() {
+      const q = getCurrentQuestion();
+      if (!q) return;
+
+      document.getElementById('current-q-index').textContent = `Câu ${q.id}`;
+      document.getElementById('current-q-total').textContent = `(Xem ${currentFilteredPointer + 1}/${filteredIndices.length} • Tổng 88)`;
+      document.getElementById('current-q-exam').textContent = `${q.examTitle} • Gốc: Câu ${q.qNum}`;
+
+      // Prompt
+      document.getElementById('q-prompt-text').textContent = `Câu ${q.id}: ${q.question}`;
+
+      // Status Badge
+      const statusEl = document.getElementById('current-q-status');
+      const evalVal = userProgress.evaluations[q.id];
+      if (evalVal === true) {
+        statusEl.className = 'q-status-badge correct';
+        statusEl.textContent = 'Đã làm đúng ✅';
+      } else if (evalVal === false) {
+        statusEl.className = 'q-status-badge wrong';
+        statusEl.textContent = 'Cần ôn lại ❌';
+      } else {
+        statusEl.className = 'q-status-badge unanswered';
+        statusEl.textContent = 'Chưa làm ⏳';
+      }
+
+      // Star
+      const isStarred = !!userProgress.starred[q.id];
+      const starBtn = document.getElementById('btn-star');
+      const starIcon = document.getElementById('star-icon');
+      starBtn.classList.toggle('active', isStarred);
+      starIcon.setAttribute('fill', isStarred ? 'currentColor' : 'none');
+
+      // Image
+      const img = document.getElementById('main-screenshot');
+      img.src = getImageUrl(q.file);
+
+      // Curtain
+      setCurtainRevealed(false);
+
+      // Render Options Cards
+      const container = document.getElementById('options-container');
+      container.innerHTML = '';
+
+      const userChoice = userProgress.answers[q.id];
+      const isAnswered = userChoice !== undefined;
+      const correctAns = q.answer;
+
+      Object.keys(q.options).sort().forEach(letter => {
+        const text = q.options[letter];
+        const card = document.createElement('div');
+        card.className = 'option-card';
+        card.setAttribute('data-letter', letter);
+
+        // Highlight if answered
+        if (isAnswered) {
+          if (correctAns.includes(letter)) {
+            card.classList.add('is-correct-target');
+          }
+          if (userChoice === letter) {
+            if (correctAns.includes(letter)) {
+              card.classList.add('selected-correct');
+            } else {
+              card.classList.add('selected-wrong');
+            }
+          }
+        }
+
+        card.innerHTML = `
+          <div class="option-letter">${letter}</div>
+          <div class="option-text">${text}</div>
+        `;
+
+        card.onclick = () => selectOption(letter);
+        container.appendChild(card);
+      });
+
+      // Explanation Box
+      const expBox = document.getElementById('explanation-box');
+      if (isAnswered) {
+        expBox.style.display = 'block';
+        document.getElementById('exp-correct-letter').textContent = `[${correctAns}]`;
+        document.getElementById('explanation-text').innerHTML = q.explanation;
+
+        const isUserCorrect = correctAns.includes(userChoice);
+        const badge = document.getElementById('exp-badge');
+        if (isUserCorrect) {
+          badge.className = 'explanation-badge correct';
+          badge.textContent = 'Chính xác! 🎉';
+        } else {
+          badge.className = 'explanation-badge wrong';
+          badge.textContent = `Bạn chọn [${userChoice}] - Chưa chính xác ⚠️`;
+        }
+      } else {
+        expBox.style.display = 'none';
+      }
+
+      // Notes
+      document.getElementById('question-note').value = userProgress.notes[q.id] || '';
+
+      // Nav
+      document.getElementById('btn-prev').disabled = currentFilteredPointer === 0;
+      document.getElementById('btn-next').disabled = currentFilteredPointer === filteredIndices.length - 1;
+
+      const jumpSelect = document.getElementById('select-jump');
+      if (jumpSelect) jumpSelect.value = currentFilteredPointer;
+    }
+
+    function renderJumpSelect() {
+      const sel = document.getElementById('select-jump');
+      sel.innerHTML = '';
+      filteredIndices.forEach((qIdx, pointer) => {
+        const q = questions[qIdx];
+        const isStarred = userProgress.starred[q.id] ? '★ ' : '';
+        const evalVal = userProgress.evaluations[q.id];
+        const statusMark = evalVal === true ? '✅' : evalVal === false ? '❌' : '⚪';
+        const opt = document.createElement('option');
+        opt.value = pointer;
+        opt.textContent = `${statusMark} ${isStarred}Câu ${q.id} (${q.examTitle})`;
+        sel.appendChild(opt);
+      });
+      sel.value = currentFilteredPointer;
+    }
+
+    function jumpToSelected(pointer) {
+      currentFilteredPointer = parseInt(pointer, 10);
+      renderCurrentQuestion();
+    }
+
+    function selectOption(letter) {
+      const q = getCurrentQuestion();
+      if (!q) return;
+
+      userProgress.answers[q.id] = letter;
+      const isCorrect = q.answer.includes(letter);
+      userProgress.evaluations[q.id] = isCorrect;
+
+      saveProgress();
+      renderCurrentQuestion();
+      renderJumpSelect();
+    }
+
+    function nextQuestion() {
+      if (currentFilteredPointer < filteredIndices.length - 1) {
+        currentFilteredPointer++;
+        renderCurrentQuestion();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentFilteredPointer > 0) {
+        currentFilteredPointer--;
+        renderCurrentQuestion();
+      }
+    }
+
+    function randomQuestion() {
+      if (filteredIndices.length <= 1) return;
+      let nextP;
+      do {
+        nextP = Math.floor(Math.random() * filteredIndices.length);
+      } while (nextP === currentFilteredPointer);
+      currentFilteredPointer = nextP;
+      renderCurrentQuestion();
+    }
+
+    function toggleStarCurrent() {
+      const q = getCurrentQuestion();
+      if (!q) return;
+      userProgress.starred[q.id] = !userProgress.starred[q.id];
+      saveProgress();
+      renderCurrentQuestion();
+      renderJumpSelect();
+    }
+
+    function saveCurrentNote(val) {
+      const q = getCurrentQuestion();
+      if (!q) return;
+      userProgress.notes[q.id] = val;
+      saveProgress();
+    }
+
+    function toggleFocusCrop() {
+      appSettings.focusCrop = !appSettings.focusCrop;
+      document.getElementById('image-container').classList.toggle('focus-crop', appSettings.focusCrop);
+      document.getElementById('btn-focus-mode').classList.toggle('active', appSettings.focusCrop);
+    }
+
+    function setCurtainRevealed(revealed) {
+      isCurtainRevealed = revealed;
+      document.getElementById('spoiler-curtain').classList.toggle('revealed', revealed);
+      document.getElementById('btn-toggle-curtain').classList.toggle('active', revealed);
+    }
+
+    function toggleCurtain() { setCurtainRevealed(!isCurtainRevealed); }
+    function revealCurtain() { setCurtainRevealed(true); }
+
+    function openLightboxCurrent() {
+      const q = getCurrentQuestion();
+      if (!q) return;
+      document.getElementById('lightbox-img').src = getImageUrl(q.file);
+      document.getElementById('lightbox-modal').classList.add('active');
+    }
+    function closeLightbox() { document.getElementById('lightbox-modal').classList.remove('active'); }
+
+    function updateStatsUI() {
+      let correct = 0, wrong = 0, starred = 0;
+      questions.forEach(q => {
+        if (userProgress.evaluations[q.id] === true) correct++;
+        if (userProgress.evaluations[q.id] === false) wrong++;
+        if (userProgress.starred[q.id]) starred++;
+      });
+      const total = correct + wrong;
+      const rate = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+      document.getElementById('stat-correct-num').textContent = correct;
+      document.getElementById('stat-wrong-num').textContent = wrong;
+      document.getElementById('stat-rate').textContent = `${rate}%`;
+      document.getElementById('count-starred').textContent = starred;
+      document.getElementById('count-wrong').textContent = wrong;
+      document.getElementById('count-correct').textContent = correct;
+    }
+
+    function openMatrixModal() {
+      const container = document.getElementById('matrix-container');
+      container.innerHTML = '';
+      const currentQ = getCurrentQuestion();
+
+      questions.forEach((q, idx) => {
+        const item = document.createElement('div');
+        item.className = 'matrix-item';
+        if (currentQ && currentQ.id === q.id) item.classList.add('current');
+        if (userProgress.evaluations[q.id] === true) item.classList.add('correct');
+        else if (userProgress.evaluations[q.id] === false) item.classList.add('wrong');
+        if (userProgress.starred[q.id]) item.classList.add('starred');
+
+        item.textContent = q.id;
+        item.title = `Câu ${q.id}: ${q.question}`;
+
+        item.onclick = () => {
+          const pointer = filteredIndices.indexOf(idx);
+          if (pointer !== -1) {
+            currentFilteredPointer = pointer;
+          } else {
+            setFilter('all');
+            currentFilteredPointer = idx;
+          }
+          renderCurrentQuestion();
+          closeModal('modal-matrix');
+        };
+        container.appendChild(item);
+      });
+
+      openModal('modal-matrix');
+    }
+
+    function setupKeyListeners() {
+      window.addEventListener('keydown', e => {
+        if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+        const key = e.key.toUpperCase();
+
+        if (e.key === 'ArrowRight' || key === 'K') nextQuestion();
+        else if (e.key === 'ArrowLeft' || key === 'J') prevQuestion();
+        else if (e.key === ' ') { e.preventDefault(); toggleCurtain(); }
+        else if (['1', 'A'].includes(key)) selectOption('A');
+        else if (['2', 'B'].includes(key)) selectOption('B');
+        else if (['3', 'C'].includes(key)) selectOption('C');
+        else if (['4', 'D'].includes(key)) selectOption('D');
+        else if (['5', 'E'].includes(key)) selectOption('E');
+        else if (key === 'S') toggleStarCurrent();
+        else if (key === 'F') toggleFocusCrop();
+        else if (key === 'Z') openLightboxCurrent();
+        else if (key === 'R') randomQuestion();
+        else if (key === '?') openShortcutsModal();
+        else if (e.key === 'Escape') { closeAllModals(); closeLightbox(); }
+      });
+    }
+
+    function openModal(id) { document.getElementById(id).classList.add('active'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+    function closeModalOnBackdrop(e, id) { if (e.target.id === id) closeModal(id); }
+    function closeAllModals() { document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active')); }
+    function openShortcutsModal() { openModal('modal-shortcuts'); }
+
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>
